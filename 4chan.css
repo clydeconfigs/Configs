@@ -1,5 +1,6 @@
 body  {
     font-size: 1.15rem;
+    font-family: Times New Roman;
 }
 
 @media (max-width: 1000px) {
@@ -10,7 +11,7 @@ body  {
 
 @media (min-width: 1001px) {
     body {
-        padding-right: 50vw;
+        padding-right: 40vw;
     }
 }
 
