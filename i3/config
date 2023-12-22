@@ -1,0 +1,163 @@
+set $mod Mod1
+
+font pango:Terminus 14
+
+#font pango:DejaVu Sans Mono 8
+
+exec --no-startup-id dex --autostart --environment i3
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+exec --no-startup-id nm-applet
+
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+floating_modifier $mod
+
+bindsym $mod+Return exec alacritty
+
+bindsym $mod+q kill
+
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -font 'Terminus 19' -theme Monokai
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+space floating toggle
+
+bindsym $mod+Shift+space focus mode_toggle
+
+bindsym $mod+a focus parent
+
+#bindsym $mod+d focus child
+
+set $ws1 "1🦊1(firefox)"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4💻️4(dev)"
+set $ws5 "5"
+set $ws6 "6🎧️6(podcast)"
+set $ws7 "7"
+set $ws8 "8🔑8(secret)"
+set $ws9 "9"
+set $ws10 "10🪣10(random)"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+mode "resize" {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ntilde resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 5 ppt
+        bindsym Down resize grow height 10 px or 5 ppt
+        bindsym Up resize shrink height 10 px or 5 ppt
+        bindsym Right resize grow width 10 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bar {
+	strip_workspace_numbers yes
+    status_command i3status
+    tray_output none
+    strip_workspace_numbers yes  # Removes borders around workspace numbers
+
+    colors {
+        separator #FF6B6B
+        background #1A1A1A
+        statusline #E0E0E0
+        focused_workspace #1A1A1A #1A1A1A #E0E0E0
+        active_workspace #1A1A1A #1A1A1A #E0E0E0
+        inactive_workspace #1A1A1A #1A1A1A #979CA7
+        urgent_workspace #FF6B6B #FF6B6B #E0E0E0
+    }
+}
+
+# DEBIAN/HP
+
+for_window [class="^.*"] border pixel 0
+default_floating_border pixel 0
+
+exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
+
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+x exec nemo
+bindsym $mod+Shift+x exec EDITOR=micro alacritty -e ranger
+bindsym $mod+z exec flameshot gui
+bindsym $mod+c exec emote
+
+bindsym $mod+Shift+m exec alacritty -e micro /tmp/a
+
+bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
+
+bindsym $mod+m exec $HOME/Media/shell/bm3
+bindsym $mod+n exec $HOME/Media/shell/weblinks
+bindsym $mod+p exec $HOME/Media/shell/genrandom
+bindsym $mod+g exec $HOME/Media/shell/google
+bindsym $mod+b exec $HOME/Media/shell/autobluetooth
+bindsym $mod+o exec $HOME/Media/shell/dictionary
+
+bindsym $mod+Escape exec rofi -font 'Terminus 19' -theme Monokai -e "$(wget -qO- ifconfig.com | grep IP | sed 's/.\{4\}$//')"
+
+bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
+bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
+
+exec feh --bg-scale /usr/share/backgrounds/wp2.jpg
+
+exec picom
+
+gaps inner 10
+
+

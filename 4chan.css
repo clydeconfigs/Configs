@@ -1,0 +1,22 @@
+body  {
+    font-size: 1.15rem;
+}
+
+@media (max-width: 1000px) {
+    body {
+        padding-right: 0vw;
+    }
+}
+
+@media (min-width: 1001px) {
+    body {
+        padding-right: 50vw;
+    }
+}
+
+.expanded-thumb {
+    height: 500px
+}
+.expandedWebm {
+    height: 500px
+}

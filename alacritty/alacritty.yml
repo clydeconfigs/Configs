@@ -1,0 +1,28 @@
+# ~/.config/alacritty/alacritty.yml
+
+# Font settings
+font:
+  normal:
+    family: Terminus
+    style: Regular
+  bold:
+    family: Terminus
+    style: Bold
+  italic:
+    family: Terminus
+    style: Italic
+  size: 15.0
+
+# Colors
+colors:
+  primary:
+    background: '0x1e1e1e'
+    foreground: '0xffffff'
+
+# Other settings
+scrolling:
+  history_size: 10000
+  
+window:
+  opacity: 0.9
+
