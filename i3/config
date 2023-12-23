@@ -138,7 +138,7 @@ bindsym $mod+Shift+x exec EDITOR=micro alacritty -e ranger
 bindsym $mod+z exec flameshot gui
 bindsym $mod+c exec emote
 
-bindsym $mod+Shift+m exec alacritty -e micro /tmp/a
+bindsym $mod+Shift+m exec alacritty -e micro $HOME/Media/Random/notepad.txt
 
 bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
 
