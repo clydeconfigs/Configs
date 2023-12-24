@@ -8,7 +8,7 @@
 PS1="\[\e[1;34m\]\[\e[1;32m\]\u@\h \[\e[1;33m\]\w\n\[\e[1;31m\]> \[\e[0m\]"
 PS1="\w>"
 
-date -R
+date +"%a, %d %b %Y %T %Z"
 
 export EDITOR=micro
 
