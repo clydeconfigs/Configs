@@ -48,7 +48,7 @@ bindsym $mod+space floating toggle
 
 bindsym $mod+Shift+space focus mode_toggle
 
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 #bindsym $mod+d focus child
 
@@ -110,7 +110,6 @@ bindsym $mod+r mode "resize"
 bar {
 	strip_workspace_numbers yes
     status_command i3status
-    tray_output none
     strip_workspace_numbers yes  # Removes borders around workspace numbers
 
     colors {
@@ -133,14 +132,15 @@ exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0
 
 bindsym $mod+Tab workspace back_and_forth
 
+bindsym $mod+Shift+m exec alacritty -e micro $HOME/Media/Random/notepad.txt
+bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
+bindsym $mod+Shift+Escape exec rofi -font 'Terminus 19' -theme Monokai -e "$(wget -qO- ipinfo.io)"
+
 bindsym $mod+x exec nemo
 bindsym $mod+Shift+x exec EDITOR=micro alacritty -e ranger
+bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random/ASMR
 bindsym $mod+z exec flameshot gui
 bindsym $mod+c exec emote
-
-bindsym $mod+Shift+m exec alacritty -e micro $HOME/Media/Random/notepad.txt
-
-bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
 
 bindsym $mod+m exec $HOME/Media/shell/bm3
 bindsym $mod+n exec $HOME/Media/shell/weblinks
@@ -148,8 +148,9 @@ bindsym $mod+p exec $HOME/Media/shell/genrandom
 bindsym $mod+g exec $HOME/Media/shell/google
 bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+o exec $HOME/Media/shell/dictionary
+bindsym $mod+i exec $HOME/Media/shell/networkmanager
 
-bindsym $mod+Escape exec rofi -font 'Terminus 19' -theme Monokai -e "$(wget -qO- ifconfig.com | grep IP | sed 's/.\{4\}$//')"
+bindsym $mod+u exec $HOME/Media/shell/manual
 
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
@@ -159,5 +160,4 @@ exec feh --bg-scale /usr/share/backgrounds/wp2.jpg
 exec picom
 
 gaps inner 10
-
 
