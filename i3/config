@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:Terminus 14
+font pango:Terminus 16
 
 #font pango:DejaVu Sans Mono 8
 
@@ -52,16 +52,16 @@ bindsym $mod+Shift+space focus mode_toggle
 
 #bindsym $mod+d focus child
 
-set $ws1 "1🦊1(firefox)"
+set $ws1 "1🌐1"
 set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4💻️4(dev)"
+set $ws3 "3🎧️3"
+set $ws4 "4💻️4"
 set $ws5 "5"
-set $ws6 "6🎧️6(podcast)"
+set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8🔑8(secret)"
+set $ws8 "8🔑8"
 set $ws9 "9"
-set $ws10 "10🪣10(random)"
+set $ws10 "10🪣10"
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -132,13 +132,12 @@ exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0
 
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+Shift+m exec alacritty -e micro $HOME/Media/Random/notepad.txt
 bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
 bindsym $mod+Shift+Escape exec rofi -font 'Terminus 19' -theme Monokai -e "$(wget -qO- ipinfo.io)"
 
 bindsym $mod+x exec nemo
 bindsym $mod+Shift+x exec EDITOR=micro alacritty -e ranger
-bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random/ASMR
+bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random
 bindsym $mod+z exec flameshot gui
 bindsym $mod+c exec emote
 
@@ -160,4 +159,3 @@ exec feh --bg-scale /usr/share/backgrounds/wp2.jpg
 exec picom
 
 gaps inner 10
-

@@ -8,7 +8,11 @@
 PS1="\[\e[1;34m\]\[\e[1;32m\]\u@\h \[\e[1;33m\]\w\n\[\e[1;31m\]> \[\e[0m\]"
 PS1="\w>"
 
-date +"%a, %d %b %Y %T %Z"
+echo -n $(date +"%a, %d %b %Y %T %Z")
+echo -n " | "
+luckynumber=$(openssl rand -base64 12)
+echo -n $luckynumber
+echo
 
 export EDITOR=micro
 
@@ -66,7 +70,14 @@ alias p='/usr/bin/python3'
 alias lua='lua5.4'
 alias l='lua5.4'
 
+# diary & notepad
+alias diary='sh Media/Random/Diary/open.sh'
+alias notepad='micro $HOME/Media/Random/notepad.txt'
 # aliases
+alias ai='ollama run mistral'
+alias yt='yt-dlp --downloader aria2c'
+alias ..='cd ..'
+alias ...='cd .. && cd ..'
 alias m='micro'
 alias e='emacs -nw'
 alias ra='ranger'
@@ -75,6 +86,7 @@ alias du='du -h'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias si='stat -c %s'
+
 # apt
 alias i='yay -S --noconfirm'
 alias r='yay -R'
@@ -88,3 +100,4 @@ alias config2='micro .config/i3status/config'
 # sync hdd
 alias synclocal='lsblk;read -p "Do you want to continue? (Yes/No): " && [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program...";sh ~/Media/shell/sync/copy_and_sync_local_hdd.sh'
 alias syncexternal='lsblk;read -p "Do you want to continue? (Yes/No): " && [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program...";sh ~/Media/shell/sync/sync_external_hdd.sh'
+
