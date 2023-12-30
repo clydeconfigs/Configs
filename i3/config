@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:Terminus 16
+font pango:Terminus 14
 
 #font pango:DejaVu Sans Mono 8
 
@@ -125,9 +125,6 @@ bar {
 
 # DEBIAN/HP
 
-for_window [class="^.*"] border pixel 0
-default_floating_border pixel 0
-
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
 
 bindsym $mod+Tab workspace back_and_forth
@@ -154,8 +151,12 @@ bindsym $mod+u exec $HOME/Media/shell/manual
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
-exec feh --bg-scale /usr/share/backgrounds/wp2.jpg
+exec nitrogen nitrogen --restore /usr/share/backgrounds/wp.jpg
 
 exec picom
 
 gaps inner 10
+
+# this crap should be default
+for_window [class="^.*"] border pixel 0
+default_floating_border pixel 0

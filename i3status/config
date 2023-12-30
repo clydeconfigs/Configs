@@ -23,8 +23,8 @@ order += "load"
 order += "tztime local"
 
 volume master {
-        format = " 🔊 %volume "
-        format_muted = "🔈️ muted (%volume)"
+        format = " VOLUME %volume "
+        format_muted = "muted (%volume)"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
@@ -43,20 +43,20 @@ ethernet _first_ {
 battery all {
         format = " %status %percentage %remaining "
         format_down = ""
-        status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
+        status_chr = "CHR"
+        status_bat = "BAT"
 }
 
 disk "/" {
-        format = " 💽 DISK %avail "
+        format = " DISK %avail "
 }
 
 load {
-        format = " 💻 CPU %1min "
+        format = " CPU %1min "
 }
 
 memory {
-        format = " 🐏 RAM %used "
+        format = " RAM %used "
         threshold_degraded = "1G"
         format_degraded = " MEMORY < %available "
 }

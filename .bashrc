@@ -9,9 +9,7 @@ PS1="\[\e[1;34m\]\[\e[1;32m\]\u@\h \[\e[1;33m\]\w\n\[\e[1;31m\]> \[\e[0m\]"
 PS1="\w>"
 
 echo -n $(date +"%a, %d %b %Y %T %Z")
-echo -n " | "
-luckynumber=$(openssl rand -base64 12)
-echo -n $luckynumber
+#echo -n " | " 
 echo
 
 export EDITOR=micro
