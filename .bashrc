@@ -26,7 +26,6 @@ function f() {
 	stat "$1"
 	file "$1"
 	sha256sum "$1"
-	b3sum "$1"
 	realpath "$1"
 }
 
@@ -47,8 +46,25 @@ function t() {
   fi
 }
 
-function dic() {
-	dict -d wn "$@" | less
+function io() {
+    local preserve_extension=false
+
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -p)
+                preserve_extension=true
+                shift
+                ;;
+            *)
+                break
+                ;;
+        esac
+    done
+    if "$preserve_extension"; then
+        ffmpeg -i "$@" "$@".jpg && echo -e "\n\e[32mSuccess!\e[0m"
+    else
+        ffmpeg -i "$@" "${@%%.*}".jpg && echo -e "\n\e[32mSuccess!\e[0m"
+    fi
 }
 
 alias mouse='xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5'
@@ -71,6 +87,7 @@ alias l='lua5.4'
 # diary & notepad
 alias diary='sh Media/Random/Diary/open.sh'
 alias notepad='micro $HOME/Media/Random/notepad.txt'
+
 # aliases
 alias ai='ollama run mistral'
 alias yt='yt-dlp --downloader aria2c'
