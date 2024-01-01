@@ -60,7 +60,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8🔑8"
-set $ws9 "9"
+set $ws9 "9㊙️9"
 set $ws10 "10🪣10"
 
 bindsym $mod+1 workspace number $ws1
@@ -151,12 +151,12 @@ bindsym $mod+u exec $HOME/Media/shell/manual
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
-exec nitrogen nitrogen --restore /usr/share/backgrounds/wp.jpg
+exec nitrogen nitrogen --restore /usr/share/backgrounds/archlinux/sunset.jpg
 
 exec picom
 
 gaps inner 10
 
-# this crap should be default
+exec xautolock -time 10 -locker "i3lock -c 242626"
 for_window [class="^.*"] border pixel 0
 default_floating_border pixel 0
