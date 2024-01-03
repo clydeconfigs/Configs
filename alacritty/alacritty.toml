@@ -14,8 +14,8 @@ family = "Terminus"
 style = "Italic"
 
 [font.normal]
-family = "Terminus"
+family = "knxt"
 style = "Regular"
 
 [window]
-opacity = 0.7
+opacity = 0.8
