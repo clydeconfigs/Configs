@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:Terminus 14
+font pango:knxt 15
 
 #font pango:DejaVu Sans Mono 8
 
@@ -22,7 +22,7 @@ bindsym $mod+Return exec alacritty
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -font 'Terminus 19' -theme Monokai
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -font 'Tamzen 15' -theme Monokai
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -52,16 +52,22 @@ bindsym $mod+Shift+space focus mode_toggle
 
 #bindsym $mod+d focus child
 
-set $ws1 "1🌐1"
+#set $ws1 "1🌐1"
+set $ws1 "1"
 set $ws2 "2"
-set $ws3 "3🎧️3"
-set $ws4 "4💻️4"
+#set $ws3 "3🎧️3"
+set $ws3 "3"
+#set $ws4 "4💻️4"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8🔑8"
-set $ws9 "9㊙️9"
-set $ws10 "10🪣10"
+#set $ws8 "8🔑8"
+set $ws8 "8"
+#set $ws9 "9㊙️9"
+set $ws9 "9"
+#set $ws10 "10🪣10"
+set $ws10 "10"
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -129,10 +135,10 @@ exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0
 
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+k exec rofi -show calc -font 'Terminus 19' -theme Monokai | awk '{print $NF}' | xclip -sel c
-bindsym $mod+Shift+Escape exec rofi -font 'Terminus 19' -theme Monokai -e "$(wget -qO- ipinfo.io)"
+bindsym $mod+k exec rofi -show calc -font 'Tamzen 15' -theme Monokai | awk '{print $NF}' | xclip -sel c
+bindsym $mod+Shift+Escape exec rofi -font 'Tamzen 15' -theme Monokai -e "$(wget -qO- ipinfo.io)"
 
-bindsym $mod+x exec nemo
+bindsym $mod+x exec thunar
 bindsym $mod+Shift+x exec EDITOR=micro alacritty -e ranger
 bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random
 bindsym $mod+z exec flameshot gui
@@ -146,8 +152,6 @@ bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+o exec $HOME/Media/shell/dictionary
 bindsym $mod+i exec $HOME/Media/shell/networkmanager
 
-bindsym $mod+u exec $HOME/Media/shell/manual
-
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
@@ -160,3 +164,5 @@ gaps inner 10
 exec xautolock -time 10 -locker "i3lock -c 242626"
 for_window [class="^.*"] border pixel 0
 default_floating_border pixel 0
+
+exec fc-cache -fv

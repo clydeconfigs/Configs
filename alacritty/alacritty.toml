@@ -6,11 +6,11 @@ foreground = "0xffffff"
 size = 15.0
 
 [font.bold]
-family = "Terminus"
+family = "knxt"
 style = "Bold"
 
 [font.italic]
-family = "Terminus"
+family = "knxt"
 style = "Italic"
 
 [font.normal]
