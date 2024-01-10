@@ -46,6 +46,13 @@ function t() {
   fi
 }
 
+function sa() {
+	if [ $# -lt 1 ]; then
+		xclip -selection clipboard -t image/png -o > "xclip-$RANDOM$RANDOM".png
+	else 
+		xclip -selection clipboard -t image/png -o > $1.png
+	fi
+}
 function io() {
     local preserve_extension=false
 
@@ -70,7 +77,6 @@ function io() {
         ffmpeg -i "$input_file" "${output_file%%.*}".jpg
     fi
 
-    # Get sizes in KB and calculate the difference and percentage change
     input_size=$(du -k "$input_file" | cut -f1)
     output_size=$(du -k "$output_file" | cut -f1)
     
@@ -137,8 +143,8 @@ alias config='micro .config/i3/config'
 alias config2='micro .config/i3status/config'
 
 # sync hdd
-alias synclocal='lsblk;read -p "Do you want to continue? (Yes/No): " && [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program...";sh ~/Media/shell/sync/copy_and_sync_local_hdd.sh'
-alias syncexternal='lsblk;read -p "Do you want to continue? (Yes/No): " && [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program...";sh ~/Media/shell/sync/sync_external_hdd.sh'
+alias synclocal='lsblk; read -p "Do you want to continue? (Press Enter for Yes): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/copy_and_sync_local_hdd.sh'
+alias syncexternal='lsblk; read -p "Do you want to continue? (Press Enter for Yes): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/sync_external_hdd.sh'
 
 # copy configs
 alias copyconfigs='sh Media/shell/sync/copy_configs.sh'
