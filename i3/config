@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:knxt 15
+font pango:monospace 15
 
 #font pango:DejaVu Sans Mono 8
 
@@ -148,7 +148,7 @@ bindsym $mod+g exec $HOME/Media/shell/google
 bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+o exec $HOME/Media/shell/dictionary
 
-bindsym $mod+s exec xclip -selection clipboard -t image/png -o > "$HOME/Desktop/xclip-$RANDOM$RANDOM".png || notify-send "error saving pic"
+bindsym $mod+s exec echo -n "$RANDOM$RANDOM" > /tmp/r && xclip -selection clipboard -t image/png -o > "$HOME/Desktop/xclip-$(cat /tmp/r)".png && cjxl --lossless_jpeg=1 "$HOME/Desktop/xclip-$(cat /tmp/r)".png "$HOME/Desktop/xclip-$(cat /tmp/r)".jxl && rm "$HOME/Desktop/xclip-$(cat /tmp/r)".png || notify-send "error saving pic"
 bindsym $mod+k exec rofi -show calc -font 'Tamzen 15' -theme Monokai | awk '{print $NF}' | xclip -sel c
 bindsym $mod+Shift+Escape exec rofi -font 'Tamzen 15' -theme Monokai -e "$(wget -qO- ipinfo.io)"
 
@@ -157,11 +157,11 @@ bindsym $mod+Shift+Escape exec rofi -font 'Tamzen 15' -theme Monokai -e "$(wget 
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
-exec nitrogen nitrogen --restore /usr/share/backgrounds/archlinux/sunset.jpg
+exec nitrogen --restore /usr/share/backgrounds/archlinux/wireparts.png
 
 exec picom
 
-gaps inner 10
+gaps inner 4
 
 exec xautolock -time 10 -locker "i3lock -c 242626"
 for_window [class="^.*"] border pixel 0
