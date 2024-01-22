@@ -22,7 +22,7 @@ bindsym $mod+Return exec alacritty
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -font 'Tamzen 15' -theme Monokai
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -font 'Tamzen 15' -theme glue_pro_blue
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -114,6 +114,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+	mode hide
+	modifier Mod1
 	strip_workspace_numbers yes
     status_command i3status
     strip_workspace_numbers yes  # Removes borders around workspace numbers
@@ -147,10 +149,11 @@ bindsym $mod+p exec $HOME/Media/shell/genrandom
 bindsym $mod+g exec $HOME/Media/shell/google
 bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+o exec $HOME/Media/shell/dictionary
+bindsym $mod+i exec alacritty -e $HOME/Media/pw/pwm
 
 bindsym $mod+s exec echo -n "$RANDOM$RANDOM" > /tmp/r && xclip -selection clipboard -t image/png -o > "$HOME/Desktop/xclip-$(cat /tmp/r)".png && cjxl --lossless_jpeg=1 "$HOME/Desktop/xclip-$(cat /tmp/r)".png "$HOME/Desktop/xclip-$(cat /tmp/r)".jxl && rm "$HOME/Desktop/xclip-$(cat /tmp/r)".png || notify-send "error saving pic"
-bindsym $mod+k exec rofi -show calc -font 'Tamzen 15' -theme Monokai | awk '{print $NF}' | xclip -sel c
-bindsym $mod+Shift+Escape exec rofi -font 'Tamzen 15' -theme Monokai -e "$(wget -qO- ipinfo.io)"
+bindsym $mod+k exec rofi -show calc -font 'Tamzen 15' -theme glue_pro_blue | awk '{print $NF}' | xclip -sel c
+bindsym $mod+Shift+Escape exec rofi -font 'Tamzen 15' -theme glue_pro_blue -e "$(wget -qO- ipinfo.io)"
 
 # bindsym $mod+i exec $HOME/Media/shell/networkmanager
 

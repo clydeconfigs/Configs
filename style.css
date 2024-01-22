@@ -1,0 +1,110 @@
+img {
+	border: 1px solid;
+}
+
+blockquote {
+	margin: 0px;
+	color: grey;
+	display: block;
+}
+
+blockquote::before {
+  content: ">";
+  float: left;
+}
+
+figure {
+	display: table;
+	border: 1px solid #c8ccd1;
+	text-align: center;
+	line-height: 0;
+	margin: 0.5em 0 1.3em 1.4em;
+	clear: right;
+	float: right;
+}
+
+figcaption {
+	border: 1px solid #c8ccd1;
+	display: table-caption;
+	caption-side: bottom;
+	line-height: 1.4em;
+	word-break: break-word;
+	text-align: left;
+	padding: 0 6px 6px 6px;
+}
+
+body {
+    margin: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    max-width: 56em; 
+    border-left: 1px solid;
+    border-right: 1px solid;
+    line-height: 140%;
+}
+pre {
+	display: table;
+    border: 1px dotted;
+    color: #1111111;
+    padding: 0.5em;
+}
+code {
+	font-size: 100%;
+    font-family: monospace;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a { 
+    color: #7a5ada; 
+}
+h1, h2, h3, h4, h5 { 
+	
+}
+
+h1 {
+	margin-top: 4em;
+	color: #7a5ada; 
+	font-weight: bold;
+    font-size: 170%;
+    border-bottom: 2px dotted;                     
+      
+}
+
+h2 {
+        font-size: 110%;
+}
+
+h3 {
+        font-size: 95%;
+}
+
+h4 {
+        font-size: 90%;
+        font-style: italic;
+}
+
+h5 {
+        font-size: 90%;
+        font-style: italic;
+}
+
+h1.title {
+        font-size: 140%;
+        font-weight: bold;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        text-align: left;
+        border: none;
+}
+
+dt code {
+        font-weight: bold;
+}
+dd p {
+        margin-top: 0;
+}
+
+#footer {
+        padding-top: 1em;
+        font-size: 70%;
+        color: gray;
+        text-align: center;
+        }
