@@ -5,31 +5,20 @@
 export PATH="$PATH:~/Media/shell"
 export PATH="$PATH:~/Media/pw"
 
+export EDITOR=micro
+
 HISTSIZE= 
 HISTFILESIZE=
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-PS1="\[\e[1;34m\]\[\e[1;32m\]\u@\h \[\e[1;33m\]\w\n\[\e[1;31m\]> \[\e[0m\]"
 PS1="\w>"
 
-echo  $(date +"%a, %d %b %Y %T %Z")
+[[ $- != *i* ]] && return
 
-export EDITOR=micro
-
-# developing
-alias python='/usr/bin/python3'
-alias p='/usr/bin/python3'
-alias lua='lua5.4'
-alias l='lua5.4'
-
-# diary & notepad
-alias diary='sh $HOME/Media/Random/Diary/open.sh'
-alias notepad='micro $HOME/Media/Random/notepad.txt'
+echo $(date +"%a, %d %b %Y %T %Z")
 
 # aliases
-alias mouse='xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5'
+alias cp='cp -iv'
+alias cat='bat -pp'
 alias bs='echo \\ Ctrl+U 005C; echo -n "\\" | xclip -selection clipboard'
 alias disks='watch -n 0.1 lsblk'
 alias nano='date +"%s%N"'
@@ -45,10 +34,8 @@ alias du='du -h'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias si='stat -c %s'
-
-# places to go, me to see
-alias mm="cd ~/Media"
-alias d="cd ~/Desktop"
+alias p='/usr/bin/python3'
+alias l='lua5.4'
 
 # apt
 alias i='yay -S --noconfirm'
@@ -60,12 +47,15 @@ alias s='yay'
 alias config='micro .config/i3/config'
 alias config2='micro .config/i3status/config'
 
-# sync hdd
-alias synclocal='lsblk; read -p "Do you want to continue? (Press Enter for Yes): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/copy_and_sync_local_hdd.sh'
-alias syncexternal='lsblk; read -p "Do you want to continue? (Press Enter for Yes): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/sync_external_hdd.sh'
+# mini functions
+diary() { sh $HOME/Media/Random/Diary/open.sh ; }
+notepad() { micro $HOME/Media/Random/notepad.txt ; }
+mouse() { xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5 ; }
 
-# copy configs
-alias copyconfigs='sh Media/shell/sync/copy_configs.sh'
+# sync hdd
+synclocal() { lsblk; read -p "Do you want to continue? (y/n): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/copy_and_sync_local_hdd.sh ; }
+syncexternal() { lsblk; read -p "Do you want to continue? (y/n): " && [[ -z "$REPLY" ]] || [[ "$REPLY" =~ ^[Yy](es)?$ ]] || { echo "Exiting the program."; exit 0; } && echo "Continuing with the program..."; sh ~/Media/shell/sync/sync_external_hdd.sh || sh ~/Media/shell/sync/sync_external_hdd2.sh; }
+copyconfigs() { sh Media/shell/sync/copy_configs.sh ; }
 
 #
 # bloated functions below... careful!
@@ -96,23 +86,4 @@ function g() {
   elif [ "$1" == "mpv" ]; then
    	mpv "$(fzf)"
   fi
-}
-
-function eo() {
-	device="/dev/sda1"
-	
-	test $# -eq 1 && device="$1"
-	test ! -e /mnt/lol && mkdir /mnt/lol
-
-	sudo cryptsetup luksOpen $device lol &&\
-	sudo mount /dev/mapper/lol /mnt/lol
-}
-
-function ec() {
-	device="/dev/sda1"
-	
-	test $# -eq 1 && device="$1"
-		
-	sudo umount /dev/mapper/lol &&\
-	sudo cryptsetup luksClose lol
 }

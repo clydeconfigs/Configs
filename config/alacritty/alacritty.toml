@@ -5,17 +5,5 @@ foreground = "0xffffff"
 [font]
 size = 15.0
 
-[font.bold]
-family = "knxt"
-style = "Bold"
-
-[font.italic]
-family = "knxt"
-style = "Italic"
-
-[font.normal]
-family = "knxt"
-style = "Regular"
-
 [window]
-opacity = 0.9
+opacity = 0.98
