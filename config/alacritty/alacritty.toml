@@ -4,6 +4,3 @@ foreground = "0xffffff"
 
 [font]
 size = 15.0
-
-[window]
-opacity = 0.98

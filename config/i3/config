@@ -3,25 +3,25 @@
 # (now known as Arch)
 #
 
-bindsym $mod+d exec --no-startup-id $HOME/Media/shell/search
-
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+Shift+x exec caja
-bindsym $mod+z exec flameshot gui
+bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+c exec emote
-
+bindsym $mod+d exec $HOME/Media/shell/search
+bindsym $mod+g exec $HOME/Media/shell/google
+bindsym $mod+k exec $HOME/Media/shell/calculator
 bindsym $mod+m exec $HOME/Media/shell/bm3
 bindsym $mod+n exec $HOME/Media/shell/weblinks
-bindsym $mod+p exec $HOME/Media/shell/genrandom
-bindsym $mod+g exec $HOME/Media/shell/google
-bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+o exec $HOME/Media/shell/dictionary
-
+bindsym $mod+p exec $HOME/Media/shell/genrandom
 bindsym $mod+s exec $HOME/Media/shell/sa
-bindsym $mod+k exec $HOME/Media/shell/calculator
-bindsym $mod+Shift+Escape exec $HOME/Media/shell/ip
+bindsym $mod+t exec $HOME/Media/shell/time
 
+bindsym $mod+Shift+x exec caja
+
+bindsym $mod+z exec flameshot gui
+bindsym $mod+Shift+Escape exec $HOME/Media/shell/ip
+    
 bindsym $mod+i exec alacritty -e $HOME/Media/pw/pwm
 
 bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random
@@ -30,20 +30,15 @@ bindsym $mod+x exec EDITOR=micro alacritty -e ranger
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
-
 gaps inner 4
 
 for_window [class="^.*"] border pixel 0
 default_floating_border pixel 0
 
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
-
 exec xautolock -time 10 -locker "i3lock -c 242626"
-
 exec picom
-
 exec fc-cache -fv
-
 exec nitrogen --restore
 
 #########################################
@@ -97,6 +92,8 @@ bar {
 
 bindsym $mod+Shift+e exec $HOME/Media/shell/exiti3
 
+#########################################
+#########################################
 #########################################
 
 set $mod Mod1
