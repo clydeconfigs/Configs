@@ -3,29 +3,74 @@
 # (now known as Arch)
 #
 
+#       $mod+a (USED)
+bindsym $mod+b exec $HOME/Media/Code/shell/autobluetooth
+#       $mod+c (USED)
+bindsym $mod+d exec $HOME/Media/Code/shell/dmenu
+#       $mod+e
+#       $mod+f (USED)
+bindsym $mod+g exec $HOME/Media/Code/shell/google
+#       $mod+h
+#       $mod+i (USED)
+#       $mod+j
+bindsym $mod+k exec $HOME/Media/Code/shell/calculator
+#       $mod+l
+bindsym $mod+m exec $HOME/Media/Code/shell/bm3
+bindsym $mod+n exec $HOME/Media/Code/shell/weblinks
+bindsym $mod+o exec $HOME/Media/Code/shell/dictionary
+bindsym $mod+p exec $HOME/Media/Code/shell/genrandom
+#       $mod+q (USED)
+#       $mod+r (USED)
+bindsym $mod+s exec $HOME/Media/Code/shell/sa
+#       $mod+t
+#       $mod+u
+#       $mod+v
+#       $mod+w
+#       $mod+x (USED)
+#       $mod+y
+#       $mod+z (USED)
+
+bindsym $mod+Shift+Escape exec $HOME/Media/Code/shell/ip
+#       $mod+Shift+a
+#       $mod+Shift+b
+#       $mod+Shift+c
+#       $mod+Shift+d
+bindsym $mod+Shift+e exec $HOME/Media/Code/shell/exiti3
+#       $mod+Shift+f
+#       $mod+Shift+g
+#       $mod+Shift+h
+#       $mod+Shift+i
+#       $mod+Shift+j
+#       $mod+Shift+k
+#       $mod+Shift+l
+#       $mod+Shift+m
+#       $mod+Shift+n
+#       $mod+Shift+o
+#       $mod+Shift+p
+#       $mod+Shift+q
+#       $mod+Shift+r (USED)
+bindsym $mod+Shift+s exec $HOME/Media/Code/shell/time
+#       $mod+Shift+t
+#       $mod+Shift+u
+#       $mod+Shift+v
+#       $mod+Shift+w
+#       $mod+Shift+x (USED)
+#       $mod+Shift+y
+#       $mod+Shift+z (USED)
+
+bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+b exec $HOME/Media/shell/autobluetooth
 bindsym $mod+c exec emote
-bindsym $mod+d exec $HOME/Media/shell/search
-bindsym $mod+g exec $HOME/Media/shell/google
-bindsym $mod+k exec $HOME/Media/shell/calculator
-bindsym $mod+m exec $HOME/Media/shell/bm3
-bindsym $mod+n exec $HOME/Media/shell/weblinks
-bindsym $mod+o exec $HOME/Media/shell/dictionary
-bindsym $mod+p exec $HOME/Media/shell/genrandom
-bindsym $mod+s exec $HOME/Media/shell/sa
-bindsym $mod+t exec $HOME/Media/shell/time
-
-bindsym $mod+Shift+x exec caja
 
 bindsym $mod+z exec flameshot gui
-bindsym $mod+Shift+Escape exec $HOME/Media/shell/ip
     
-bindsym $mod+i exec alacritty -e $HOME/Media/pw/pwm
+bindsym $mod+i exec alacritty -e $HOME/Media/Sensible/pw/pwm
 
 bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random
 bindsym $mod+x exec EDITOR=micro alacritty -e ranger
+
+bindsym $mod+Shift+x exec caja
 
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
@@ -40,11 +85,6 @@ exec xautolock -time 10 -locker "i3lock -c 242626"
 exec picom
 exec fc-cache -fv
 exec nitrogen --restore
-
-#########################################
-#
-# changed defaults:
-#
 
 bindsym $mod+space floating toggle
 
@@ -90,12 +130,6 @@ bar {
     }
 }
 
-bindsym $mod+Shift+e exec $HOME/Media/shell/exiti3
-
-#########################################
-#########################################
-#########################################
-
 set $mod Mod1
 
 exec --no-startup-id dex --autostart --environment i3
@@ -123,13 +157,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+h split h
-
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
-
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 set $ws1 "1"
 set $ws2 "2"
@@ -164,7 +194,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-
 bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c reload

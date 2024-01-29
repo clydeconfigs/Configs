@@ -6,9 +6,8 @@ source ~/.bash_functions
 
 export BROWSER="waterfox"
 
-export PATH="$PATH:~/Media/shell/tools"
-export PATH="$PATH:~/Media/shell"
-export PATH="$PATH:~/Media/pw"
+export PATH="$PATH:~/Media/Code/shell/tools"
+export PATH="$PATH:~/Media/Code/shell"
 
 export EDITOR=micro
 
