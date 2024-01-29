@@ -2,11 +2,13 @@
 # ~/.bashrc
 #
 
+fish
+
 source ~/.bash_functions
 
 export BROWSER="waterfox"
 
-export PATH="$PATH:~/Media/Code/shell/tools"
+export PATH="$PATH:~/Media/Code/tools"
 export PATH="$PATH:~/Media/Code/shell"
 
 export EDITOR=micro
