@@ -2,10 +2,14 @@
 
 fish_default_key_bindings
 
+bind \cd 'kill-bigword'
+
 set -g fish_greeting (date +"%a, %d %b %Y %T %Z")
 
+set fish_prompt_pwd_dir_length 0
+
 function fish_prompt
-    set_color green
+    set_color yellow
     echo -n (prompt_pwd)
     set_color normal
     echo -n '>'
