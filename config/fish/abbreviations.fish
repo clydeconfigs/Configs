@@ -1,4 +1,5 @@
 # abbreviations
+abbr -ag vi 'nvim'
 abbr -ag upper 'tr [:lower:] [:upper:]'
 abbr -ag lower 'tr [:upper:] [:lower:]'
 abbr -ag tb 'nc termbin.com 9999'

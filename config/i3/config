@@ -10,7 +10,7 @@ bindsym $mod+d exec $HOME/Media/Code/shell/dmenu
 #       $mod+e
 #       $mod+f (USED)
 bindsym $mod+g exec $HOME/Media/Code/shell/google
-#       $mod+h
+#       $mod+h (USED)
 #       $mod+i (USED)
 #       $mod+j
 bindsym $mod+k exec $HOME/Media/Code/shell/calculator
@@ -24,8 +24,8 @@ bindsym $mod+p exec $HOME/Media/Code/shell/genrandom
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
 #       $mod+t
 #       $mod+u
-#       $mod+v
-#       $mod+w
+#       $mod+v (USED)
+#       $mod+w (USED)
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
@@ -53,13 +53,18 @@ bindsym $mod+Shift+s exec $HOME/Media/Code/shell/time
 #       $mod+Shift+t
 #       $mod+Shift+u
 #       $mod+Shift+v
-#       $mod+Shift+w
+#       $mod+Shift+w (USED)
 #       $mod+Shift+x (USED)
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+w exec waterfox
+bindsym $mod+Shift+w exec torbrowser-launcher
+
+for_window [title="^Tor Browser$"] floating enable
 
 bindsym $mod+c exec emote
 
@@ -75,9 +80,10 @@ bindsym $mod+Shift+x exec caja
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
-gaps inner 4
+gaps inner 16
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
+
 default_floating_border pixel 0
 
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
