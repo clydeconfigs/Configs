@@ -61,14 +61,14 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+c exec emote
+bindsym $mod+c exec alacritty -e micro /home/clyde/Media/Random/emoji
 
 bindsym $mod+z exec flameshot gui
     
 bindsym $mod+i exec alacritty -e $HOME/Media/Sensible/pw/pwm
 
-bindsym $mod+a exec EDITOR=micro alacritty -e ranger $HOME/Media/Random
-bindsym $mod+x exec EDITOR=micro alacritty -e ranger
+bindsym $mod+a exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media/Random/
+bindsym $mod+x exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media
 
 bindsym $mod+Shift+x exec caja
 
@@ -122,7 +122,7 @@ bar {
     strip_workspace_numbers yes  # Removes borders around workspace numbers
 
     colors {
-        separator #FF6B6B
+        separator #a88f32
         background #1A1A1A
         statusline #E0E0E0
         focused_workspace #1A1A1A #1A1A1A #E0E0E0
