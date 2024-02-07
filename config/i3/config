@@ -3,6 +3,23 @@
 # (now known as Arch)
 #
 
+exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
+exec xautolock -time 10 -locker "i3lock -c 242626"
+exec picom
+exec nitrogen --restore
+exec xrdb -merge ~/.Xresources
+exec xmodmap -e "clear Lock" -e "keycode 66 = backslash"
+
+gaps inner 0
+#16 for kids
+
+for_window [class="^.*"] border pixel 4
+for_window [title="^Tor Browser$"] floating enable
+
+default_floating_border pixel 0
+
+font pango:monospace 15
+
 #       $mod+a (USED)
 bindsym $mod+b exec $HOME/Media/Code/shell/autobluetooth
 #       $mod+c (USED)
@@ -67,35 +84,19 @@ bindsym $mod+z exec flameshot gui
     
 bindsym $mod+i exec alacritty -e $HOME/Media/Sensible/pw/pwm
 
-bindsym $mod+a exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media/Random/
-bindsym $mod+x exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media
+bindsym $mod+x exec EDITOR=micro alacritty -e ranger $HOME/Media/Random/
+bindsym $mod+a exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media
 
 bindsym $mod+Shift+x exec caja
 
 bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
 bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
-
-gaps inner 16
-
-for_window [class="^.*"] border pixel 4
-for_window [title="^Tor Browser$"] floating enable
-
-default_floating_border pixel 0
-
-exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
-exec xautolock -time 10 -locker "i3lock -c 242626"
-exec picom
-exec fc-cache -fv
-exec nitrogen --restore
-
+bindsym $mod+n gaps inner all set 0px; gaps outer all set 0px
+bindsym $mod+Shift+n gaps inner all set 20px; gaps outer all set 40px
 bindsym $mod+space floating toggle
-
 bindsym $mod+Shift+space focus mode_toggle
 
-font pango:monospace 15
-
 bindsym $mod+Return exec alacritty
-
 bindsym $mod+q kill
 
 mode "resize" {
