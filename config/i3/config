@@ -13,7 +13,8 @@ exec xmodmap -e "clear Lock" -e "keycode 66 = backslash"
 gaps inner 0
 #16 for kids
 
-for_window [class="^.*"] border pixel 4
+hide_edge_borders both
+for_window [class="^.*"] border pixel 7
 for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
@@ -30,7 +31,7 @@ bindsym $mod+g exec $HOME/Media/Code/shell/google
 #       $mod+h (USED)
 #       $mod+i (USED)
 #       $mod+j
-bindsym $mod+k exec $HOME/Media/Code/shell/calculator
+#       $mod+k
 #       $mod+l
 bindsym $mod+m exec $HOME/Media/Code/shell/bm3
 #       $mod+n
@@ -58,7 +59,7 @@ bindsym $mod+Shift+e exec $HOME/Media/Code/shell/exiti3
 #       $mod+Shift+h
 #       $mod+Shift+i
 #       $mod+Shift+j
-#       $mod+Shift+k
+bindsym $mod+Shift+k exec $HOME/Media/Code/shell/calculator
 #       $mod+Shift+l
 #       $mod+Shift+m
 #       $mod+Shift+n
@@ -149,17 +150,17 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 floating_modifier $mod
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
