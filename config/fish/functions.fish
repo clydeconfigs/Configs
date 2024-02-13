@@ -69,8 +69,8 @@ function t
         rm -rf /tmp/t/*
         echo "deleted all files inside /tmp/t"
     else
-        set random_chars (date +"%s%N")
-        set temp_dir "/tmp/t/$argv[1]__$random_chars"
+        set random_chars (tr -dc "a-z" </dev/urandom | head -c 10)
+        set temp_dir "/tmp/t/$argv[1]_$random_chars"
         mkdir -p "$temp_dir"; and cd "$temp_dir"
     end
 end

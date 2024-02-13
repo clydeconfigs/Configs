@@ -10,8 +10,7 @@ exec nitrogen --restore
 exec xrdb -merge ~/.Xresources
 exec xmodmap -e "clear Lock" -e "keycode 66 = backslash"
 
-gaps inner 0
-#16 for kids
+gaps inner 0 #16 for kids
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 7
@@ -22,44 +21,44 @@ default_floating_border pixel 0
 font pango:monospace 15
 
 #       $mod+a (USED)
-bindsym $mod+b exec $HOME/Media/Code/shell/autobluetooth
+bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
 #       $mod+c (USED)
-bindsym $mod+d exec $HOME/Media/Code/shell/dmenu
+bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
 #       $mod+e
 #       $mod+f (USED)
-bindsym $mod+g exec $HOME/Media/Code/shell/google
+bindsym $mod+g exec $HOME/Media/Code/rofi/google
 #       $mod+h (USED)
 #       $mod+i (USED)
 #       $mod+j
 #       $mod+k
 #       $mod+l
-bindsym $mod+m exec $HOME/Media/Code/shell/bm3
+bindsym $mod+m exec $HOME/Media/Code/rofi/bm3
 #       $mod+n
-bindsym $mod+o exec $HOME/Media/Code/shell/dictionary
-bindsym $mod+p exec $HOME/Media/Code/shell/genrandom
+bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary
+bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
 #       $mod+t
 #       $mod+u
 #       $mod+v (USED)
-bindsym $mod+w exec $HOME/Media/Code/shell/weblinks
+bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
 
-bindsym $mod+Shift+Escape exec $HOME/Media/Code/shell/ip
+bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 #       $mod+Shift+a
 #       $mod+Shift+b
 #       $mod+Shift+c
 #       $mod+Shift+d
-bindsym $mod+Shift+e exec $HOME/Media/Code/shell/exiti3
+bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
 #       $mod+Shift+f
 #       $mod+Shift+g
 #       $mod+Shift+h
 #       $mod+Shift+i
 #       $mod+Shift+j
-bindsym $mod+Shift+k exec $HOME/Media/Code/shell/calculator
+bindsym $mod+Shift+k exec $HOME/Media/Code/rofi/calculator
 #       $mod+Shift+l
 #       $mod+Shift+m
 #       $mod+Shift+n
@@ -67,7 +66,7 @@ bindsym $mod+Shift+k exec $HOME/Media/Code/shell/calculator
 #       $mod+Shift+p
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
-bindsym $mod+Shift+s exec $HOME/Media/Code/shell/time
+bindsym $mod+Shift+s exec $HOME/Media/Code/rofi/time
 #       $mod+Shift+t
 #       $mod+Shift+u
 #       $mod+Shift+v
