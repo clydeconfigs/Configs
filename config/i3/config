@@ -1,16 +1,21 @@
 #########################################
+# Thinkpad T420
+#
+
+# exec xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -1
+
+#########################################
 # DEBIAN/HP
 # (now known as Arch)
 #
 
+exec setxkbmap es
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
 exec xautolock -time 10 -locker "i3lock -c 242626"
 exec picom
 exec nitrogen --restore
 exec xrdb -merge ~/.Xresources
 exec xmodmap -e "clear Lock" -e "keycode 66 = backslash"
-
-gaps inner 0 #16 for kids
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 7
@@ -34,7 +39,7 @@ bindsym $mod+g exec $HOME/Media/Code/rofi/google
 #       $mod+l
 bindsym $mod+m exec $HOME/Media/Code/rofi/bm3
 #       $mod+n
-bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary
+bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary2
 bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
@@ -62,7 +67,7 @@ bindsym $mod+Shift+k exec $HOME/Media/Code/rofi/calculator
 #       $mod+Shift+l
 #       $mod+Shift+m
 #       $mod+Shift+n
-#       $mod+Shift+o
+bindsym $mod+Shift+o exec $HOME/Media/Code/rofi/dictionary
 #       $mod+Shift+p
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
