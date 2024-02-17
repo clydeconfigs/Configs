@@ -23,9 +23,9 @@ for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
-font pango:monospace 15
+font pango:Noto Sans 15
 
-#       $mod+a (USED)
+#       $mod+a
 bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
 #       $mod+c (USED)
 bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
@@ -83,14 +83,13 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+c exec alacritty -e micro /home/clyde/Media/Random/emoji
+bindsym $mod+c exec st -e micro /home/clyde/Media/Random/emoji
 
 bindsym $mod+z exec flameshot gui
     
-bindsym $mod+i exec alacritty -e $HOME/Media/Sensible/pw/pwm
+bindsym $mod+i exec st -e $HOME/Media/Sensible/pw/pwm
 
-bindsym $mod+x exec EDITOR=micro alacritty -e ranger $HOME/Media/Random/
-bindsym $mod+a exec EDITOR=micro urxvt -e sh -c ranger $HOME/Media
+bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
 bindsym $mod+Shift+x exec caja
 
@@ -101,7 +100,7 @@ bindsym $mod+Shift+n gaps inner all set 20px; gaps outer all set 40px
 bindsym $mod+space floating toggle
 bindsym $mod+Shift+space focus mode_toggle
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 bindsym $mod+q kill
 
 mode "resize" {

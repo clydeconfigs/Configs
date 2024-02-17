@@ -1,4 +1,7 @@
 [colors.primary]
 background = "#282828"
 [font]
-size = 15.0
+size = 20.0
+[font.normal]
+#family = "Xanh Mono"
+family = "Comic Mono"

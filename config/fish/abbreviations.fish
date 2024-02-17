@@ -1,4 +1,5 @@
 # abbreviations
+abbr -ag gu 'gitui'
 abbr -ag gpg 'gpg --pinentry-mode loopback'
 abbr -ag copy 'xclip -sel c'
 abbr -ag vi 'nvim'
@@ -13,6 +14,8 @@ abbr -ag yt 'yt-dlp --downloader aria2c'
 abbr -ag si 'stat -c %s'
 abbr -ag .. 'cd ..'
 abbr -ag ... 'cd .. && cd ..'
+abbr -ag .... 'cd .. && cd .. && cd ..'
+abbr -ag ..... 'cd .. && cd .. && cd .. && cd ..'
 
 abbr -ag m 'micro'
 abbr -ag e 'emacs -nw'

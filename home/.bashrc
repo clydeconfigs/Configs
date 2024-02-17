@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+[[ $- != *i* ]] && return
+
 fish
 
 source ~/.bash_functions
@@ -18,8 +20,6 @@ export HISTSIZE=
 export HISTFILESIZE=
 
 PS1="\[\033[32m\]\w\[\033[0m\]>"
-
-[[ $- != *i* ]] && return
 
 echo $(date +"%a, %d %b %Y %T %Z")
 
