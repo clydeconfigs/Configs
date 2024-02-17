@@ -1,0 +1,5 @@
+[Desktop Entry] 
+Icon=/usr/share/icons/st.svg
+Type=Application
+Name=st: simple terminal
+Exec=/usr/local/bin/st 

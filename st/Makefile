@@ -8,7 +8,7 @@ SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
 all: st
-
+	
 config.h:
 	cp config.def.h config.h
 
@@ -35,6 +35,8 @@ dist: clean
 	rm -rf st-$(VERSION)
 
 install: st
+	cp st.desktop /usr/share/applications
+	cp st.svg /usr/share/icons
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f st $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st
@@ -45,6 +47,8 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 
 uninstall:
+	rm -f /usr/share/applications
+	rm -f /usr/share/icons
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 
