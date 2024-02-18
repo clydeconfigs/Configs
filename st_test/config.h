@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Comic Mono:pixelsize=24:antialias=true:autohint=true";
+static char *font = "Comic Mono:pixelsize=30:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -217,8 +217,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 3} },
-	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 3} },
+	{ XK_ANY_MOD,            Button4, kscrollup,      {.i = 3} },
+	{ XK_ANY_MOD,            Button5, kscrolldown,    {.i = 3} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -246,16 +246,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ ControlMask,               XK_1,           selectscheme,   {.i =  0} },
-	{ ControlMask,               XK_2,           selectscheme,   {.i =  1} },
-	{ ControlMask,               XK_3,           selectscheme,   {.i =  2} },
-	{ ControlMask,               XK_4,           selectscheme,   {.i =  3} },
-	{ ControlMask,               XK_5,           selectscheme,   {.i =  4} },
-	{ ControlMask,               XK_6,           selectscheme,   {.i =  5} },
-	{ ControlMask,               XK_7,           selectscheme,   {.i =  6} },
-	{ ControlMask,               XK_8,           selectscheme,   {.i =  7} },
-	{ ControlMask,               XK_9,           selectscheme,   {.i =  8} },
-
 };
 
 /*
