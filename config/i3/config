@@ -8,7 +8,7 @@
 # DEBIAN/HP
 # (now known as Arch)
 #
-
+#deletetest
 exec setxkbmap es
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
 exec xautolock -time 10 -locker "i3lock -c 242626"
@@ -56,7 +56,7 @@ bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 #       $mod+Shift+a
 #       $mod+Shift+b
 #       $mod+Shift+c
-#       $mod+Shift+d
+bindsym $mod+Shift+d exec $HOME/Media/Code/rofi/diccionario
 bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
 #       $mod+Shift+f
 #       $mod+Shift+g
@@ -68,7 +68,7 @@ bindsym $mod+Shift+k exec $HOME/Media/Code/rofi/calculator
 #       $mod+Shift+m
 #       $mod+Shift+n
 bindsym $mod+Shift+o exec $HOME/Media/Code/rofi/dictionary
-#       $mod+Shift+p
+bindsym $mod+Shift+p exec rofi-pass 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $HOME/Media/Code/rofi/time
