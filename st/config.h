@@ -5,8 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Comic Mono:pixelsize=24:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Comic Mono:pixelsize=24:antialias=true:autohint=true";static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -164,7 +163,7 @@ static const ColorScheme schemes[] = {
 };
 
 static const char * const * colorname;
-int colorscheme = 6;
+int colorscheme = 1;
 
 /*
  * Default colors (colorname index)
@@ -239,9 +238,10 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_plus,        zoom,           {.f = +1} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+		{ TERMMOD,              XK_C,           clipcopy,      {.i =  0} },
+
+	{ ControlMask,              XK_V,           clippaste,      {.i =  0} },
+	{ ControlMask,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
