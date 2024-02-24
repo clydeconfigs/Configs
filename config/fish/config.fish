@@ -17,6 +17,7 @@ end
 
 set -gx PATH $PATH ~/Media/Code/tools
 set -gx PATH $PATH ~/Media/Code/shell
+set -gx PATH $PATH ~/Media/Code/shell/expanded
 
 source ~/.config/fish/functions.fish
 source ~/.config/fish/abbreviations.fish

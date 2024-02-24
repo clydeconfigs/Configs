@@ -18,10 +18,10 @@ abbr -ag .... 'cd .. && cd .. && cd ..'
 abbr -ag ..... 'cd .. && cd .. && cd .. && cd ..'
 
 abbr -ag m 'micro'
-abbr -ag e 'emacs -nw'
+abbr -ag em 'emacs -nw'
 abbr -ag ra 'ranger'
 abbr -ag p 'python3'
-abbr -ag j 'julia'
+abbr -ag ju 'julia'
 
 abbr -ag du 'du -h'
 abbr -ag ls 'ls --color=auto'

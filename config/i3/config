@@ -8,7 +8,8 @@
 # DEBIAN/HP
 # (now known as Arch)
 #
-#deletetest
+
+exec $HOME/Media/Code/shell/loop
 exec setxkbmap es
 exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
 exec xautolock -time 10 -locker "i3lock -c 242626"
@@ -23,9 +24,9 @@ for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
-font pango:Noto Sans 15
+font pango:Comic Mono 18
 
-#       $mod+a
+bindsym $mod+a exec $HOME/Media/Code/rofi/filemanager
 bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
 #       $mod+c (USED)
 bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
@@ -33,10 +34,10 @@ bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
 #       $mod+f (USED)
 bindsym $mod+g exec $HOME/Media/Code/rofi/google
 #       $mod+h (USED)
-#       $mod+i (USED)
-#       $mod+j
-#       $mod+k
-#       $mod+l
+bindsym $mod+i exec $HOME/Media/Code/rofi/pass 
+#       $mod+j (USED)
+#       $mod+k (USED)
+#       $mod+l (USED)
 bindsym $mod+m exec $HOME/Media/Code/rofi/bm3
 #       $mod+n
 bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary2
@@ -59,7 +60,7 @@ bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 bindsym $mod+Shift+d exec $HOME/Media/Code/rofi/diccionario
 bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
 #       $mod+Shift+f
-#       $mod+Shift+g
+bindsym $mod+Shift+g exec $HOME/Media/Code/rofi/translate
 #       $mod+Shift+h
 #       $mod+Shift+i
 #       $mod+Shift+j
@@ -68,7 +69,7 @@ bindsym $mod+Shift+k exec $HOME/Media/Code/rofi/calculator
 #       $mod+Shift+m
 #       $mod+Shift+n
 bindsym $mod+Shift+o exec $HOME/Media/Code/rofi/dictionary
-bindsym $mod+Shift+p exec rofi-pass 
+#       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $HOME/Media/Code/rofi/time
@@ -82,21 +83,23 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
-
+ 
 bindsym $mod+c exec st -e micro /home/clyde/Media/Random/emoji
 
 bindsym $mod+z exec flameshot gui
     
-bindsym $mod+i exec st -e $HOME/Media/Sensible/pw/pwm
-
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
 bindsym $mod+Shift+x exec caja
 
-bindsym --whole-window --border $mod+button4 exec i3-volume up 5 -P
-bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
-bindsym $mod+n gaps inner all set 0px; gaps outer all set 0px
-bindsym $mod+Shift+n gaps inner all set 20px; gaps outer all set 40px
+bindsym $mod+Shift+m --whole-window --border exec i3-volume mute
+bindsym $mod+plus exec i3-volume up 10 -P
+bindsym $mod+minus exec i3-volume down 10 -P
+# bindsym $mod+button4 --whole-window --border exec i3-volume up 5 -P
+# bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
+
+bindsym $mod+Shift+n gaps inner all set 0px; gaps outer all set 0px
+bindsym $mod+n gaps inner all set 20px; gaps outer all set 40px
 bindsym $mod+space floating toggle
 bindsym $mod+Shift+space focus mode_toggle
 
@@ -168,16 +171,16 @@ bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1󰈹 1"
+set $ws2 "2 2"
+set $ws3 "3 3"
+set $ws4 "4 4"
+set $ws5 "5 5"
+set $ws6 "6 6"
+set $ws7 "7 7"
+set $ws8 "8 8"
+set $ws9 "9 9"
+set $ws10 "10 10"
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2

@@ -1,5 +1,69 @@
+#   __                  _   _
+#  / _|_   _ _ __   ___| |_(_) ___  _ __  ___
+# | |_| | | | '_ \ / __| __| |/ _ \| '_ \/ __|
+# |  _| |_| | | | | (__| |_| | (_) | | | \__ \
+# |_|  \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
+#
+
+# start of 't' function family
+#
+
+function t
+    if test (count $argv) -lt 1
+        set random_chars (tr -dc "a-z" </dev/urandom | head -c 10)
+        set temp_dir "/tmp/t/$random_chars"
+        echo "created $temp_dir without a name"
+        mkdir -p "$temp_dir"; and cd "$temp_dir"
+        return 1
+    else if test "$argv[1]" = "c"
+        if test -e /tmp/t
+            set size (du -h /tmp/t | awk '{print $1}' | tail -n1)
+            rm -rf /tmp/t
+            echo "deleted $size of files inside /tmp/t"
+        else
+            echo "/tmp/t doesn't exist"
+        end
+    else
+        set random_chars (tr -dc "a-z" </dev/urandom | head -c 10)
+        set temp_dir "/tmp/t/$argv[1]_$random_chars"
+        mkdir -p "$temp_dir"; and cd "$temp_dir"
+    end
+end
+
+function ct
+    if test (count $argv) -lt 1
+        echo "input the name or content of the name of the /tmp/t/ folder you want to cd into"
+        exit 1
+    else
+        cd /tmp/t/(ls /tmp/t | grep $argv[1])
+    end
+end
+
+function tt
+    tree /tmp/t/
+end
+
+#
+# end of 't' function family
+
+function upload
+    if test (count $argv) -lt 1
+        curl -F 'file=@-' 0x0.st 
+    else
+        curl -F 'file=@-' 0x0.st < $argv[1]
+    end
+end
+
+function upload2
+    if test (count $argv) -lt 1
+        curl -F 'f:1=<-' ix.io 
+    else
+        curl -F 'f:1=<-' ix.io < $argv[1]
+    end
+end
+
 function junk
-    bat -pp /usr/share/dict/spanish | shuf | tail -n $argv[1] | tr \n " "
+    cat /usr/share/dict/spanish | sed 's/\b.*\b/&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n&\n/' | shuf | tail -n $argv[1] | tr \n " "
 end
 
 function l
@@ -56,23 +120,6 @@ end
 
 function copyconfigs
     sh $HOME/Media/Code/shell/sync/copy_configs.sh
-end
-
-function t
-    if test (count $argv) -lt 1
-        set random_chars (tr -dc "a-z" </dev/urandom | head -c 10)
-        set temp_dir "/tmp/t/$random_chars"
-        echo "created $temp_dir without a name"
-        mkdir -p "$temp_dir"; and cd "$temp_dir"
-        return 1
-    else if test "$argv[1]" = "c"
-        rm -rf /tmp/t/*
-        echo "deleted all files inside /tmp/t"
-    else
-        set random_chars (tr -dc "a-z" </dev/urandom | head -c 10)
-        set temp_dir "/tmp/t/$argv[1]_$random_chars"
-        mkdir -p "$temp_dir"; and cd "$temp_dir"
-    end
 end
 
 function g
