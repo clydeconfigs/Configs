@@ -127,10 +127,11 @@ bar {
 	modifier Mod1
 	strip_workspace_numbers yes
     status_command i3status
-    strip_workspace_numbers yes  # Removes borders around workspace numbers
-
+    status_command exec $HOME/Media/Code/i3bar/lol.sh
+    
+    separator_symbol "/"
     colors {
-        separator #a88f32
+        # separator #a88f32
         background #1A1A1A
         statusline #E0E0E0
         focused_workspace #1A1A1A #1A1A1A #E0E0E0

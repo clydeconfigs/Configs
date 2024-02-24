@@ -25,7 +25,7 @@ abbr -ag ju 'julia'
 
 abbr -ag du 'du -h'
 abbr -ag ls 'ls --color=auto'
-abbr -ag grep 'grep --color=auto'
+abbr -ag grep 'grep'
 abbr -ag cp 'cp -iv'
 abbr -ag cat 'bat -pp'
 

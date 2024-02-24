@@ -9,10 +9,10 @@
 general {
         colors = true
         interval = 1
+        output_format = i3bar
 }
 
 order += "volume master"
-
 #order += "ipv6"
 #order += "wireless _first_"
 #order += "ethernet _first_"

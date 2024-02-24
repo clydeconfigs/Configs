@@ -15,7 +15,6 @@ function fish_prompt
     echo -n '>'
 end
 
-set -gx PATH $PATH ~/Media/Code/tools
 set -gx PATH $PATH ~/Media/Code/shell
 set -gx PATH $PATH ~/Media/Code/shell/expanded
 
