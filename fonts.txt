@@ -1,3 +1,0 @@
-ttf-kh-dotfont
-ttf-tamzen-font-git
-knxt

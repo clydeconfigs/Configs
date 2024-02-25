@@ -28,9 +28,9 @@ font pango:Comic Mono 18
 
 bindsym $mod+a exec $HOME/Media/Code/rofi/filemanager
 bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
-#       $mod+c (USED)
+bindsym $mod+c exec $HOME/Media/Code/rofi/calculator
 bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
-#       $mod+e
+bindsym $mod+e exec $HOME/Media/Code/rofi/emoji
 #       $mod+f (USED)
 bindsym $mod+g exec $HOME/Media/Code/rofi/google
 #       $mod+h (USED)
@@ -39,18 +39,18 @@ bindsym $mod+i exec $HOME/Media/Code/rofi/pass
 #       $mod+k (USED)
 #       $mod+l (USED)
 bindsym $mod+m exec $HOME/Media/Code/rofi/bm3
-#       $mod+n
+#       $mod+n (USED)
 bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary2
 bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
-#       $mod+t
+#       $mod+t (will probably never use)
 #       $mod+u
 #       $mod+v (USED)
 bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)
-#       $mod+y
+#       $mod+y (will probably never use)
 #       $mod+z (USED)
 
 bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
@@ -64,7 +64,7 @@ bindsym $mod+Shift+g exec $HOME/Media/Code/rofi/translate
 #       $mod+Shift+h
 #       $mod+Shift+i
 #       $mod+Shift+j
-bindsym $mod+Shift+k exec $HOME/Media/Code/rofi/calculator
+#       $mod+Shift+k 
 #       $mod+Shift+l
 #       $mod+Shift+m
 #       $mod+Shift+n
@@ -83,11 +83,9 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
- 
-bindsym $mod+c exec st -e micro /home/clyde/Media/Random/emoji
 
 bindsym $mod+z exec flameshot gui
-    
+
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
 bindsym $mod+Shift+x exec caja
@@ -128,17 +126,6 @@ bar {
 	strip_workspace_numbers yes
     status_command i3status
     status_command exec $HOME/Media/Code/i3bar/lol.sh
-    
-    separator_symbol "/"
-    colors {
-        # separator #a88f32
-        background #1A1A1A
-        statusline #E0E0E0
-        focused_workspace #1A1A1A #1A1A1A #E0E0E0
-        active_workspace #1A1A1A #1A1A1A #E0E0E0
-        inactive_workspace #1A1A1A #1A1A1A #979CA7
-        urgent_workspace #FF6B6B #FF6B6B #E0E0E0
-    }
 }
 
 set $mod Mod1
@@ -162,10 +149,10 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 bindsym $mod+Shift+v split h
 bindsym $mod+v split v

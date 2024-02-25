@@ -15,14 +15,16 @@ function fish_prompt
     echo -n '>'
 end
 
+set -gx PATH $PATH ~/Media/Tree
 set -gx PATH $PATH ~/Media/Code/shell
 set -gx PATH $PATH ~/Media/Code/shell/expanded
 
 source ~/.config/fish/functions.fish
 source ~/.config/fish/abbreviations.fish
 
-set -gx BROWSER "waterfox"
+export PASSWORD_STORE_DIR="$HOME/Media/Sensible/pass/password-store"
 
+set -gx BROWSER "waterfox"
 set -gx EDITOR "micro"
 
 set -gx HISTTIMEFORMAT "%F %T "
