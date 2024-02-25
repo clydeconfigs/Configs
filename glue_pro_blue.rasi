@@ -36,7 +36,7 @@
     selected-active-background:  rgba ( 38, 139, 210, 100 % );
 }
 window {
-    background-color: rgba ( 0, 0, 0, 33 % );
+    background-color: rgba ( 0, 0, 0, 87 % );
     border:           0;
     padding:          5;
 }
@@ -63,6 +63,9 @@ listview {
 element {
     border:  0;
     padding: 1px ;
+}
+element-icon {
+    size: 2ch;
 }
 element-text {
     background-color: inherit;

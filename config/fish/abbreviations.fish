@@ -8,8 +8,6 @@ abbr -ag lower 'tr [:upper:] [:lower:]'
 abbr -ag tb 'nc termbin.com 9999'
 abbr -ag disks 'watch -n 0.1 lsblk'
 abbr -ag nano 'date +"%s%N"'
-abbr -ag ai 'ollama run mistral --nowordwrap'
-abbr -ag ai2 'ollama run tinyllama:1.1b --nowordwrap'
 abbr -ag yt 'yt-dlp --downloader aria2c'
 abbr -ag si 'stat -c %s'
 abbr -ag .. 'cd ..'
@@ -38,3 +36,8 @@ abbr -ag s 'yay'
 # i3 
 abbr -ag config 'micro ~/.config/i3/config'
 abbr -ag config2 'micro ~/.config/i3status/config'
+
+# ollama
+abbr -ag ai 'ollama run llama2:13b --nowordwrap'
+abbr -ag ai2 'ollama run tinyllama:1.1b --nowordwrap'
+abbr -ag aimini 'ollama run qwen:0.5b --nowordwrap'
