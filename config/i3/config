@@ -46,7 +46,7 @@ bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
 #       $mod+t (will probably never use)
-#       $mod+u
+bindsym $mod+u exec $HOME/Media/Code/rofi/windowcd
 #       $mod+v (USED)
 bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)
@@ -56,7 +56,7 @@ bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 #       $mod+Shift+a
 #       $mod+Shift+b
-#       $mod+Shift+c
+#       $mod+Shift+c (USED)
 bindsym $mod+Shift+d exec $HOME/Media/Code/rofi/diccionario
 bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
 #       $mod+Shift+f
