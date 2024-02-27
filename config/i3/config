@@ -26,7 +26,7 @@ default_floating_border pixel 0
 
 font pango:Comic Mono 18
 
-bindsym $mod+a exec $HOME/Media/Code/rofi/filemanager
+bindsym $mod+a exec $HOME/Media/Code/rofi/windowcd
 bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
 bindsym $mod+c exec $HOME/Media/Code/rofi/calculator
 bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
@@ -45,15 +45,14 @@ bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
-#       $mod+t (will probably never use)
-bindsym $mod+u exec $HOME/Media/Code/rofi/windowcd
+#       $mod+t                                        (will probably never use)
+#       $mod+u 
 #       $mod+v (USED)
 bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)
-#       $mod+y (will probably never use)
+#       $mod+y                                        (will probably never use)
 #       $mod+z (USED)
 
-bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 #       $mod+Shift+a
 #       $mod+Shift+b
 #       $mod+Shift+c (USED)
@@ -77,9 +76,10 @@ bindsym $mod+Shift+s exec $HOME/Media/Code/rofi/time
 #       $mod+Shift+u
 #       $mod+Shift+v
 bindsym $mod+Shift+w exec torbrowser-launcher
-#       $mod+Shift+x (USED)
+bindsym $mod+Shift+x exec $HOME/Media/Code/rofi/filemanager
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
+bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
@@ -87,8 +87,6 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+z exec flameshot gui
 
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
-
-bindsym $mod+Shift+x exec caja
 
 bindsym $mod+Shift+m --whole-window --border exec i3-volume mute
 bindsym $mod+plus exec i3-volume up 10 -P
