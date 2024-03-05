@@ -1,22 +1,16 @@
 #########################################
-# Thinkpad T420
-#
-
-# exec xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -1
-
-#########################################
 # DEBIAN/HP
 # (now known as Arch)
 #
 
-exec $HOME/Media/Code/shell/loop
-exec setxkbmap es
-exec xinput set-prop "SINOWEALTH GXT 970 Gaming Mouse" "libinput Accel Speed" -0.5
+exec fish $HOME/Media/Random/archgreponline/archgreponline
 exec xautolock -time 10 -locker "i3lock -c 242626"
+exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/cheng-feng-4pTY4ty7jXM-unsplash.jpg
+exec setxkbmap es
 exec picom
-exec nitrogen --restore
+exec dunst
 exec xrdb -merge ~/.Xresources
-exec xmodmap -e "clear Lock" -e "keycode 66 = backslash"
+exec $HOME/Media/Code/shell/loop
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 7
@@ -24,7 +18,7 @@ for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
-font pango:Comic Mono 18
+font pango:Roboto Mono 16
 
 bindsym $mod+a exec $HOME/Media/Code/rofi/windowcd
 bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
@@ -45,17 +39,17 @@ bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
-#       $mod+t                                        (will probably never use)
-#       $mod+u 
+#       $mod+t 
+#       $mod+u
 #       $mod+v (USED)
 bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)
-#       $mod+y                                        (will probably never use)
+#       $mod+y
 #       $mod+z (USED)
 
 #       $mod+Shift+a
 #       $mod+Shift+b
-#       $mod+Shift+c (USED)
+#       $mod+Shift+c
 bindsym $mod+Shift+d exec $HOME/Media/Code/rofi/diccionario
 bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
 #       $mod+Shift+f
@@ -84,7 +78,7 @@ bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+z exec flameshot gui
+bindsym $mod+z exec flameshot gui --raw | xclip -sel c
 
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
@@ -165,7 +159,7 @@ set $ws5 "5 5"
 set $ws6 "6 6"
 set $ws7 "7 7"
 set $ws8 "8 8"
-set $ws9 "9 9"
+set $ws9 "9 9"
 set $ws10 "10 10"
 
 bindsym $mod+1 workspace number $ws1
@@ -193,4 +187,4 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload

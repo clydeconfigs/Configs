@@ -110,16 +110,16 @@ end
 
 function synclocal
     lsblk
-    sh ~/Media/Code/shell/sync/copy_and_sync_local_hdd.sh
+    sh ~/Media/Code/sync/copy_configs_and_sync_local_hdd.sh
 end
 
 function syncexternal
     lsblk
-    sh ~/Media/Code/shell/sync/sync_external_hdd.sh; or sh ~/Media/Code/shell/sync/sync_external_hdd2.sh
+    sh ~/Media/Code/sync/sync_external_hdd.sh
 end
 
 function copyconfigs
-    sh $HOME/Media/Code/shell/sync/copy_configs.sh
+    sh $HOME/Media/Code/sync/copy_configs.sh
 end
 
 function g

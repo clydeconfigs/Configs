@@ -1,4 +1,5 @@
 # abbreviations
+abbr -ag lb 'lsblk'
 abbr -ag gu 'gitui'
 abbr -ag gpg 'gpg --pinentry-mode loopback'
 abbr -ag copy 'xclip -sel c'
