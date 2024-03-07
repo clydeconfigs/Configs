@@ -40,7 +40,7 @@ bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
 #       $mod+r (USED)
 bindsym $mod+s exec $HOME/Media/Code/shell/sa
 #       $mod+t 
-#       $mod+u
+bindsym $mod+u exec clav
 #       $mod+v (USED)
 bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+x (USED)

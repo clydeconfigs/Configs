@@ -2,6 +2,8 @@ configuration {
  modi: "window,drun,ssh,combi";
  font: "Roboto Mono 16";
  combi-modi: "window,drun,ssh";
+ lines: 0;
+ fixed-num-lines: false;
  }
 
 * {
