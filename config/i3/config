@@ -3,9 +3,8 @@
 # (now known as Arch)
 #
 
-exec fish $HOME/Media/Random/archgreponline/archgreponline
-exec xautolock -time 10 -locker "i3lock -c 242626"
-exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/cheng-feng-4pTY4ty7jXM-unsplash.jpg
+exec xautolock -time 3 -locker "i3lock -c 000022"
+exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/0034.jpg
 exec setxkbmap es
 exec picom
 exec dunst
@@ -20,29 +19,31 @@ default_floating_border pixel 0
 
 font pango:Roboto Mono 16
 
-bindsym $mod+a exec $HOME/Media/Code/rofi/windowcd
-bindsym $mod+b exec $HOME/Media/Code/rofi/autobluetooth
-bindsym $mod+c exec $HOME/Media/Code/rofi/calculator
-bindsym $mod+d exec $HOME/Media/Code/rofi/dmenu
-bindsym $mod+e exec $HOME/Media/Code/rofi/emoji
+set $rofi $HOME/Media/Code/rofi
+
+bindsym $mod+a exec $rofi/windowcd
+bindsym $mod+b exec $rofi/autobluetooth
+bindsym $mod+c exec $rofi/calculator
+bindsym $mod+d exec $rofi/dmenu
+bindsym $mod+e exec $rofi/emoji
 #       $mod+f (USED)
-bindsym $mod+g exec $HOME/Media/Code/rofi/google
+bindsym $mod+g exec $rofi/google
 #       $mod+h (USED)
-bindsym $mod+i exec $HOME/Media/Code/rofi/pass 
+bindsym $mod+i exec $rofi/pass 
 #       $mod+j (USED)
 #       $mod+k (USED)
 #       $mod+l (USED)
-bindsym $mod+m exec $HOME/Media/Code/rofi/bm3
+bindsym $mod+m exec $rofi/bm3
 #       $mod+n (USED)
-bindsym $mod+o exec $HOME/Media/Code/rofi/dictionary2
-bindsym $mod+p exec $HOME/Media/Code/rofi/genrandom
+bindsym $mod+o exec $rofi/dictionary2
+bindsym $mod+p exec $rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
-bindsym $mod+s exec $HOME/Media/Code/shell/sa
+#       $mod+s (USED)
 #       $mod+t 
-bindsym $mod+u exec clav
+#       $mod+u (USED)
 #       $mod+v (USED)
-bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
+bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
@@ -50,33 +51,37 @@ bindsym $mod+w exec $HOME/Media/Code/rofi/weblinks
 #       $mod+Shift+a
 #       $mod+Shift+b
 #       $mod+Shift+c
-bindsym $mod+Shift+d exec $HOME/Media/Code/rofi/diccionario
-bindsym $mod+Shift+e exec $HOME/Media/Code/rofi/exiti3
+bindsym $mod+Shift+d exec $rofi/diccionario
+bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
-bindsym $mod+Shift+g exec $HOME/Media/Code/rofi/translate
-#       $mod+Shift+h
+bindsym $mod+Shift+g exec $rofi/translate
+#       $mod+Shift+h (USED)
 #       $mod+Shift+i
-#       $mod+Shift+j
-#       $mod+Shift+k 
-#       $mod+Shift+l
-#       $mod+Shift+m
-#       $mod+Shift+n
-bindsym $mod+Shift+o exec $HOME/Media/Code/rofi/dictionary
+#       $mod+Shift+j (USED)
+#       $mod+Shift+k (USED) 
+#       $mod+Shift+l (USED)
+#       $mod+Shift+m (USED)
+#       $mod+Shift+n (USED)
+bindsym $mod+Shift+o exec $rofi/dictionary
 #       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
-bindsym $mod+Shift+s exec $HOME/Media/Code/rofi/time
+bindsym $mod+Shift+s exec $rofi/time
 #       $mod+Shift+t
 #       $mod+Shift+u
 #       $mod+Shift+v
 bindsym $mod+Shift+w exec torbrowser-launcher
-bindsym $mod+Shift+x exec $HOME/Media/Code/rofi/filemanager
+bindsym $mod+Shift+x exec $rofi/filemanager
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
-bindsym $mod+Shift+Escape exec $HOME/Media/Code/rofi/ip
+bindsym $mod+Shift+Escape exec $rofi/ip
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+s exec $HOME/Media/Code/shell/sa
+
+bindsym $mod+u exec clav
 
 bindsym $mod+z exec flameshot gui --raw | xclip -sel c
 

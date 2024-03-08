@@ -27,7 +27,7 @@ configuration {
     normal-background:           transparent;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  rgba ( 100, 100, 100, 100 % );
-    border-color:                @foreground;
+    border-color:                rgba ( 40, 85, 119, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 0, 0, 0, 0 % );
     urgent-background:           transparent;
@@ -38,10 +38,10 @@ configuration {
     active-background:           rgba ( 57, 57, 57, 100 % );
     selected-active-background:  rgba ( 38, 139, 210, 100 % );
 }
-window {
-    background-color: rgba ( 0, 0, 0, 87 % );
-    border:           0;
-    padding:          5;
+window {                             //87 for kids
+    background-color: rgba ( 0, 0, 0, 100 % );
+    border:           6;
+    padding:          2;
 }
 mainbox {
     border:  0;
