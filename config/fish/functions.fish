@@ -46,6 +46,10 @@ end
 #
 # end of 't' function family
 
+function b
+    bash -c "$argv"
+end
+
 function upload
     if test (count $argv) -lt 1
         curl -F 'file=@-' 0x0.st 

@@ -4,7 +4,7 @@
 #
 
 exec xautolock -time 3 -locker "i3lock -c 000022"
-exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/0034.jpg
+exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/High-Resolution-World-Map.jpg
 exec setxkbmap es
 exec picom
 exec dunst
@@ -35,7 +35,7 @@ bindsym $mod+i exec $rofi/pass
 #       $mod+l (USED)
 bindsym $mod+m exec $rofi/bm3
 #       $mod+n (USED)
-bindsym $mod+o exec $rofi/dictionary2
+bindsym $mod+o exec $rofi/dictionary
 bindsym $mod+p exec $rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
@@ -51,7 +51,7 @@ bindsym $mod+w exec $rofi/weblinks
 #       $mod+Shift+a
 #       $mod+Shift+b
 #       $mod+Shift+c
-bindsym $mod+Shift+d exec $rofi/diccionario
+#       $mod+Shift+d
 bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
 bindsym $mod+Shift+g exec $rofi/translate
@@ -62,7 +62,7 @@ bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+l (USED)
 #       $mod+Shift+m (USED)
 #       $mod+Shift+n (USED)
-bindsym $mod+Shift+o exec $rofi/dictionary
+#       $mod+Shift+o
 #       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
@@ -156,16 +156,16 @@ bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
-set $ws1 "1󰈹 1"
-set $ws2 "2 2"
-set $ws3 "3 3"
-set $ws4 "4 4"
-set $ws5 "5 5"
-set $ws6 "6 6"
-set $ws7 "7 7"
-set $ws8 "8 8"
-set $ws9 "9 9"
-set $ws10 "10 10"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2

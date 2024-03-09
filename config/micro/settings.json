@@ -1,5 +1,6 @@
 {
     "colorscheme": "cmc-16",
+    "lsp.server": "python=pylsp",
     "softwrap": true,
     "wordwrap": true
 }

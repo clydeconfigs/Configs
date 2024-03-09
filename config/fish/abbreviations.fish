@@ -22,6 +22,7 @@ abbr -ag ra 'ranger'
 abbr -ag p 'python3'
 abbr -ag ju 'julia'
 
+abbr -ag base64 'base64 -w0' 
 abbr -ag du 'du -h'
 abbr -ag ls 'ls --color=auto'
 abbr -ag grep 'grep'
