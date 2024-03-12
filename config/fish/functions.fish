@@ -46,6 +46,48 @@ end
 #
 # end of 't' function family
 
+# start of 'cryptsetup LUKS' function family
+#
+
+function eo
+    if test (count $argv) -eq 1
+        set device $argv[1]
+    
+        set lol (basename $device)
+    
+        if not test -e /mnt/$lol
+            sudo mkdir /mnt/$lol
+        end
+    
+        if sudo cryptsetup luksOpen /dev/$device $lol; and sudo mount /dev/mapper/$lol /mnt/$lol
+            echo "[eo] mounted at /mnt/$lol"
+        else
+            sudo mount /dev/$device /mnt/$lol
+            echo "[eo] mounted at /mnt/$lol"
+        end
+    end
+end
+
+function ec
+    if test (count $argv) -eq 1
+        set device $argv[1]
+
+        set lol (basename $device)
+
+        if sudo umount /dev/mapper/$lol; and sudo cryptsetup luksClose $lol
+            echo "[ec] unmounted"
+        else
+            sudo umount /mnt/$lol
+            echo "[ec] unmounted"
+        end
+    end
+
+    sync
+end
+
+#
+# end of 'cryptsetup LUKS' function family
+
 function b
     bash -c "$argv"
 end
