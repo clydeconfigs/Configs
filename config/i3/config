@@ -9,7 +9,7 @@ exec setxkbmap es
 exec picom
 exec dunst
 exec xrdb -merge ~/.Xresources
-exec $HOME/Media/Code/shell/loop
+exec $shell/loop
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 7
@@ -20,6 +20,7 @@ default_floating_border pixel 0
 font pango:Roboto Mono 16
 
 set $rofi $HOME/Media/Code/rofi
+set $shell $HOME/Media/Code/shell
 
 bindsym $mod+a exec $rofi/windowcd
 bindsym $mod+b exec $rofi/autobluetooth
@@ -50,7 +51,7 @@ bindsym $mod+w exec $rofi/weblinks
 
 #       $mod+Shift+a
 #       $mod+Shift+b
-#       $mod+Shift+c
+bindsym $mod+Shift+c exec $rofi/cmd
 #       $mod+Shift+d
 bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
@@ -79,11 +80,11 @@ bindsym $mod+Shift+Escape exec $rofi/ip
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+s exec $HOME/Media/Code/shell/sa
-
 bindsym $mod+u exec clav
 
-bindsym $mod+z exec flameshot gui --raw | xclip -sel c
+bindsym $mod+s exec $shell/sa
+
+bindsym --release $mod+z exec scrot -zs -e 'xclip -selection clipboard -t image/png -i $f' -F - > "$HOME/Desktop/$(date -R).png" && dunstify "saved at $HOME/Desktop/$(date -R).png"
 
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
@@ -192,4 +193,4 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Shift+r restart
-# bindsym $mod+Shift+c reload
+bindsym $mod+Shift+p reload

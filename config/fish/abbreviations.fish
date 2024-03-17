@@ -1,5 +1,5 @@
 # abbreviations
-abbr -ag enc 'scrypt enc --logN 20 -r16 -p4 --passphrase dev:stdin-once'
+abbr -ag top 'bpytop'
 abbr -ag lb 'lsblk'
 abbr -ag gu 'gitui'
 abbr -ag gpg 'gpg --pinentry-mode loopback'
