@@ -1,6 +1,7 @@
-xautolock
-btop
 bat
+bluez
+bluez-utils
+btop
 caja
 colordiff
 cryptsetup
@@ -28,11 +29,13 @@ rofi-calc
 rofi-pass
 rsync
 sxiv
+ttf-joypixels
 ttf-nerd-fonts-symbols
 ttf-roboto-mono
 w3m-imgcat
 waterfox-bin
 words
+xautolock
 xclip
 xorg-xinput
 xwallpaper

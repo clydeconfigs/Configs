@@ -12,12 +12,12 @@ exec xrdb -merge ~/.Xresources
 exec $shell/loop
 
 hide_edge_borders both
-for_window [class="^.*"] border pixel 7
+for_window [class="^.*"] border pixel 3
 for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
-font pango:Roboto Mono 16
+font pango:Roboto Mono 12
 
 set $rofi $HOME/Media/Code/rofi
 set $shell $HOME/Media/Code/shell
@@ -57,7 +57,7 @@ bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
 bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+h (USED)
-#       $mod+Shift+i
+bindsym $mod+Shift+i exec $rofi/internet
 #       $mod+Shift+j (USED)
 #       $mod+Shift+k (USED) 
 #       $mod+Shift+l (USED)
@@ -95,7 +95,7 @@ bindsym $mod+minus exec i3-volume down 10 -P
 # bindsym $mod+button5 --whole-window --border exec i3-volume down 5 -P
 
 bindsym $mod+Shift+n gaps inner all set 0px; gaps outer all set 0px
-bindsym $mod+n gaps inner all set 20px; gaps outer all set 40px
+bindsym $mod+n gaps inner all set 10px; gaps outer all set 20px
 bindsym $mod+space floating toggle
 bindsym $mod+Shift+space focus mode_toggle
 

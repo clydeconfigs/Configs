@@ -1,10 +1,18 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "Roboto Mono 16";
+ font: "Roboto Mono 13";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
  }
+
+listview {
+	columns: 3;
+}
+
+window {
+	width: 30%;
+}
 
 * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
@@ -40,7 +48,7 @@ configuration {
 }
 window {                             //87 for kids
     background-color: rgba ( 0, 0, 0, 100 % );
-    border:           6;
+    border:           3;
     padding:          2;
 }
 mainbox {

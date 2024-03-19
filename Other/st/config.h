@@ -147,23 +147,23 @@ static const ColorScheme schemes[] = {
 	  "#657b83", "#6c71c4", "#586e75", "#002b36",
 	  [256]="#586e75", "#002b36"}, 12, 8, 256, 257},
 
-	// Gruvbox dark
-	{{"#282828", "#cc241d", "#98971a", "#d79921",
-	  "#458588", "#b16286", "#689d6a", "#a89984",
-	  "#928374", "#fb4934", "#b8bb26", "#fabd2f",
-	  "#83a598", "#d3869b", "#8ec07c", "#ebdbb2",
-	  [256]="#ebdbb2", "#555555"}, 15, 0, 256, 257},
-
 	// Gruvbox light
 	{{"#fbf1c7", "#cc241d", "#98971a", "#d79921",
 	  "#458588", "#b16286", "#689d6a", "#7c6f64",
 	  "#928374", "#9d0006", "#79740e", "#b57614",
 	  "#076678", "#8f3f71", "#427b58", "#3c3836",
 	  [256]="#3c3836", "#555555"}, 15, 0, 256, 257},
+
+	// CUSTOM
+	{{"white", "red3", "green3", "yellow3",
+	  	  "blue2", "magenta3", "cyan3", "black",
+	  	  "black", "red", "green", "yellow",
+	  	  "#5c5cff", "magenta", "cyan", "black",
+	  	  [256]="#555555", "#cccccc"}, 7, 0, 256, 257},
 };
 
 static const char * const * colorname;
-int colorscheme = 0;
+int colorscheme = 1;
 
 /*
  * Default colors (colorname index)
