@@ -84,7 +84,7 @@ bindsym $mod+u exec clav
 
 bindsym $mod+s exec $shell/sa
 
-bindsym --release $mod+z exec scrot -zs -e 'xclip -selection clipboard -t image/png -i $f' -F - > "$HOME/Desktop/$(date -R).png" && dunstify "saved at $HOME/Desktop/$(date -R).png"
+bindsym --release $mod+z exec $shell/maim
 
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
