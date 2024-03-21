@@ -1,0 +1,28 @@
+#!/bin/bash
+
+[current_window]
+command=xdotool getwindowfocus getwindowname
+interval=1
+color=#FFFFFF
+background=#224488
+align=center
+min_width=1270
+
+[ram]
+command=echo "$(free | awk '/Mem/{printf("%.2f/%.2f\n", $3/1024000, $2/1024000)}')"
+interval=1
+color=#FFFFFF
+
+[separator]
+command=echo " "
+interval=100
+color=#FFFFFF
+
+[date]
+command=echo $(date +"%a %D %T")" "
+interval=1
+color=#FFFFFF
+
+
+
+

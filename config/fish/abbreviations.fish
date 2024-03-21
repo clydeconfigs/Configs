@@ -50,6 +50,7 @@ abbr -ag aimini 'ollama run qwen:0.5b --nowordwrap'
 
 # navigation
 abbr -ag media 'cd ~/Media'
+abbr -ag Configs 'cd ~/Media/Code/Configs'
 abbr -ag shell 'cd ~/Media/Code/shell'
 abbr -ag rofi 'cd ~/Media/Code/rofi'
 abbr -ag pics 'cd ~/Media/Random/Pics'

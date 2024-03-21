@@ -3,6 +3,7 @@
 # (now known as Arch)
 #
 
+exec picom
 exec xautolock -time 3 -locker "i3lock -c 000022"
 exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/High-Resolution-World-Map.jpg
 exec setxkbmap es
@@ -122,8 +123,19 @@ bar {
 	mode hide
 	modifier Mod1
 	strip_workspace_numbers yes
-    status_command i3status
-    status_command exec $HOME/Media/Code/i3bar/lol.sh
+    status_command i3blocks
+
+    colors {
+    background          #222222
+    statusline          #ffffff
+    separator           #222222
+
+    focused_workspace   #224488 #224488 #ffffff
+    active_workspace    #5f676a #5f676a #ffffff
+    inactive_workspace  #333333 #333333 #888888
+    urgent_workspace    #900000 #900000 #ffffff
+    binding_mode        #2f343a #900000 #ffffff
+}
 }
 
 set $mod Mod1
