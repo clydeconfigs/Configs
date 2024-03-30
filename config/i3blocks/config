@@ -4,22 +4,27 @@
 command=xdotool getwindowfocus getwindowname
 interval=1
 color=#FFFFFF
-background=#224488
 align=center
-min_width=1270
+min_width=1150
+
+[cpu]
+command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{printf "%6.2f\n", 100 - $1}'
+
+interval=1
+color=#FFFFFF                
 
 [ram]
-command=echo "$(free | awk '/Mem/{printf("%.2f/%.2f\n", $3/1024000, $2/1024000)}')"
+command=free | awk '/Mem/{printf("%.2f/%.2f\n", $3/1024000, $2/1024000)}'
 interval=1
 color=#FFFFFF
 
-[separator]
-command=echo " "
-interval=100
+[disk]
+command=df -h . | tail -n1 | awk '{print $3"/"$4}' | tr -d 'G'
+interval=1
 color=#FFFFFF
 
 [date]
-command=echo $(date +"%a %D %T")" "
+command=date +"%D %T"
 interval=1
 color=#FFFFFF
 

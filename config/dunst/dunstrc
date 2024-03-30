@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 700
+    width = 500
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -63,8 +63,16 @@
     # Corner radius for the progress bar. 0 disables rounded corners.
     progress_bar_corner_radius = 0
 
+    # Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
+    # is set to 0 this option will be ignored.
+    progress_bar_corners = all
+
     # Corner radius for the icon image.
     icon_corner_radius = 0
+
+    # Define which corners to round when drawing the icon image. If icon_corner_radius
+    # is set to 0 this option will be ignored.
+    icon_corners = all
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
@@ -95,7 +103,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#ffffff"
+    frame_color = "#aaaaaa"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -128,7 +136,7 @@
 
     ### Text ###
 
-    font = Roboto Mono 15
+    font = Source Code Pro 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -216,10 +224,10 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 0
+    min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 300
+    max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -256,6 +264,13 @@
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
     corner_radius = 0
+
+    # Define which corners to round when drawing the window. If the corner radius
+    # is set to 0 this option will be ignored.
+    #
+    # Comma-separated list of the corners. The accepted corner values are bottom-right,
+    # bottom-left, top-right, top-left, top, bottom, left, right or all.
+    corners = all
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -318,14 +333,14 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#000000"
-    foreground = "#ffffff"
+    background = "#222222"
+    foreground = "#888888"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#000000"
+    background = "#285577"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
@@ -333,9 +348,9 @@
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#000000"
+    background = "#900000"
     foreground = "#ffffff"
-    frame_color = "#a2a2a2"
+    frame_color = "#ff0000"
     timeout = 0
     override_pause_level = 60
     # Icon for notifications with critical urgency, uncomment to enable

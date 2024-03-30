@@ -3,9 +3,9 @@
 # (now known as Arch)
 #
 
+exec greenclip daemon
 exec picom
 exec xautolock -time 3 -locker "i3lock -c 000022"
-exec xwallpaper --screen 0 --zoom ~/Media/Random/Pics/High-Resolution-World-Map.jpg
 exec setxkbmap es
 exec picom
 exec dunst
@@ -18,7 +18,7 @@ for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
-font pango:Roboto Mono 12
+font pango:Source Code Pro 12
 
 set $rofi $HOME/Media/Code/rofi
 set $shell $HOME/Media/Code/shell
@@ -43,17 +43,17 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-#       $mod+u (USED)
+#       $mod+u free-- lol
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
 
-#       $mod+Shift+a
+bindsym $mod+Shift+a exec $rofi/greenclip
 #       $mod+Shift+b
 bindsym $mod+Shift+c exec $rofi/cmd
-#       $mod+Shift+d
+bindsym $mod+Shift+d exec $rofi/cryptsetupui
 bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
 bindsym $mod+Shift+g exec $rofi/translate
@@ -70,22 +70,21 @@ bindsym $mod+Shift+i exec $rofi/internet
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $rofi/time
 #       $mod+Shift+t
-#       $mod+Shift+u
-#       $mod+Shift+v
+bindsym $mod+Shift+u exec $rofi/evalfilemanager
+#       $mod+Shift+v (USED)
 bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Shift+x exec $rofi/filemanager
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
 bindsym $mod+Shift+Escape exec $rofi/ip
+bindsym $mod+Shift+space exec $rofi/interface
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+u exec clav
-
 bindsym $mod+s exec $shell/sa
 
-bindsym --release $mod+z exec $shell/maim
+bindsym $mod+z exec $shell/maim
 
 bindsym $mod+x exec EDITOR=micro st -e ranger $HOME/Media/Random/
 
@@ -98,7 +97,6 @@ bindsym $mod+minus exec i3-volume down 10 -P
 bindsym $mod+Shift+n gaps inner all set 0px; gaps outer all set 0px
 bindsym $mod+n gaps inner all set 10px; gaps outer all set 20px
 bindsym $mod+space floating toggle
-bindsym $mod+Shift+space focus mode_toggle
 
 bindsym $mod+Return exec st
 bindsym $mod+q kill
@@ -117,25 +115,6 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
-}
-
-bar {
-	mode hide
-	modifier Mod1
-	strip_workspace_numbers yes
-    status_command i3blocks
-
-    colors {
-    background          #222222
-    statusline          #ffffff
-    separator           #222222
-
-    focused_workspace   #224488 #224488 #ffffff
-    active_workspace    #5f676a #5f676a #ffffff
-    inactive_workspace  #333333 #333333 #888888
-    urgent_workspace    #900000 #900000 #ffffff
-    binding_mode        #2f343a #900000 #ffffff
-}
 }
 
 set $mod Mod1
@@ -168,6 +147,11 @@ bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
+
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+p reload
 
 set $ws1 "1"
 set $ws2 "2"
@@ -202,7 +186,21 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+r mode "resize"
+bar {
+	mode hide
+	modifier Mod1
+	strip_workspace_numbers yes
+    status_command i3blocks
 
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+p reload
+    colors {
+        background          #222222
+        statusline          #ffffff
+        separator           #222222
+
+        focused_workspace   #224488 #224488 #ffffff
+        active_workspace    #5f676a #5f676a #ffffff
+        inactive_workspace  #333333 #333333 #888888
+        urgent_workspace    #900000 #900000 #ffffff
+        binding_mode        #2f343a #900000 #ffffff
+    }
+}

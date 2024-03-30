@@ -1,17 +1,17 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "Roboto Mono 13";
+ font: "Source Code Pro 13";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
  }
 
 listview {
-	columns: 3;
+	columns: 2;
 }
 
 window {
-	width: 30%;
+	width: 40%;
 }
 
 * {
@@ -46,8 +46,8 @@ window {
     active-background:           rgba ( 57, 57, 57, 100 % );
     selected-active-background:  rgba ( 38, 139, 210, 100 % );
 }
-window {                             //87 for kids
-    background-color: rgba ( 33, 33, 33, 90 % );
+window {                             //90 for kids
+    background-color: rgba ( 33, 33, 33, 100 % );
     border:           3;
     padding:          5;
 }

@@ -62,7 +62,7 @@ function eo
         if sudo cryptsetup luksOpen /dev/$device $lol; and sudo mount /dev/mapper/$lol /mnt/$lol
             echo "[eo] mounted at /mnt/$lol"
         else
-            sudo mount /dev/$device /mnt/$lol
+            sudo mount /dev/$lol /mnt/$lol
             echo "[eo] mounted at /mnt/$lol"
         end
     end
@@ -77,7 +77,7 @@ function ec
         if sudo umount /dev/mapper/$lol; and sudo cryptsetup luksClose $lol
             echo "[ec] unmounted"
         else
-            sudo umount /mnt/$lol
+            sudo umount /dev/$lol
             echo "[ec] unmounted"
         end
     end
