@@ -1,4 +1,5 @@
 bat
+bluetoothctl
 bluez
 bluez-utils
 btop
@@ -6,6 +7,7 @@ caja
 colordiff
 cryptsetup
 dunst
+feh
 fish 
 flameshot
 git
@@ -18,6 +20,7 @@ ly
 man
 micro
 mpv
+netcat
 noto-fonts-cjk
 pass
 pass-otp
@@ -28,7 +31,6 @@ rofi
 rofi-calc
 rofi-pass
 rsync
-sxiv
 ttf-joypixels
 ttf-nerd-fonts-symbols
 ttf-roboto-mono

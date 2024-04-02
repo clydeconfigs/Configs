@@ -1,3 +1,11 @@
+# quick access
+abbr -ag notepad 'micro $HOME/Media/Random/notepad.txt'
+abbr -ag diary 'sh $HOME/Media/Random/Diary/open.sh'
+
+abbr -ag synclocal 'lsblk; sh ~/Media/Code/sync/copy_configs_and_sync_local_hdd.sh'
+abbr -ag syncexternal 'lsblk; sh ~/Media/Code/sync/sync_external_hdd.sh'
+abbr -ag copyconfigs 'sh $HOME/Media/Code/sync/copy_configs.sh'
+
 # abbreviations
 abbr -ag feh 'feh -d  --scale-down'
 abbr -ag gpg 'gpg --pinentry-mode loopback'
@@ -26,10 +34,10 @@ abbr -ag ju 'julia'
 # coreutils options
 abbr -ag base64 'base64 -w0' 
 abbr -ag du 'du -h'
-abbr -ag ls 'ls --color=auto'
 abbr -ag grep 'grep'
 abbr -ag cp 'cp -iv'
 abbr -ag cat 'bat -pp'
+abbr -ag ls 'ls --group-directories-first -ltr'
 
 # apt
 abbr -ag i 'yay -S --noconfirm'
