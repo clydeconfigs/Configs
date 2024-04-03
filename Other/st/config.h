@@ -113,7 +113,7 @@ static const ColorScheme schemes[] = {
 	  [256]="#cccccc", "#555555"}, 7, 0, 256, 257},
 
 	// Alacritty (dark)
-	{{"#1d1f21", "#cc6666", "#b5bd68", "#f0c674",
+	{{"#141414", "#cc6666", "#b5bd68", "#f0c674",
 	  "#81a2be", "#b294bb", "#8abeb7", "#c5c8c6",
 	  "#666666", "#d54e53", "#b9ca4a", "#e7c547",
 	  "#7aa6da", "#c397d8", "#70c0b1", "#eaeaea",
@@ -163,7 +163,7 @@ static const ColorScheme schemes[] = {
 };
 
 static const char * const * colorname;
-int colorscheme = 1;
+int colorscheme = 0;
 
 /*
  * Default colors (colorname index)
