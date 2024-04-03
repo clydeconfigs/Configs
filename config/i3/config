@@ -45,14 +45,14 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-#       $mod+u free-- lol
+bindsym $mod+u exec keys_menu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
 
-bindsym $mod+Shift+a exec $rofi/greenclip
+bindsym $mod+Shift+a exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && $rofi/greenclip
 #       $mod+Shift+b
 bindsym $mod+Shift+c exec $rofi/cmd
 bindsym $mod+Shift+d exec $rofi/cryptsetupui
