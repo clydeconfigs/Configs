@@ -7,7 +7,9 @@ function fish_prompt
     echo -n '>'
 end
 
+export PYTHONSTARTUP="$HOME/Media/Code/Configs/Other/python_startup.py"
 export PASSWORD_STORE_DIR="$HOME/Media/Sensible/pass/password-store"
+export key_database_dir="$HOME/Media/Sensible/keys_database"
 
 source ~/.config/fish/abbreviations.fish
 

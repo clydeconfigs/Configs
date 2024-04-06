@@ -3,8 +3,7 @@
 # (now known as Arch)
 #
 
-exec feh --bg-scale $HOME/Media/Random/Pics/wp.png
-
+exec feh --bg-scale $HOME/Media/Random/Pics/bfly.jpg
 exec greenclip daemon
 exec picom
 exec xautolock -time 6 -locker "i3lock -c 000022"
@@ -45,7 +44,7 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-bindsym $mod+u exec keys_menu "rofi -dmenu"
+bindsym $mod+u exec export key_database_dir="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
