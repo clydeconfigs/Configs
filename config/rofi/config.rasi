@@ -47,8 +47,8 @@ window {
     selected-active-background:  rgba ( 38, 139, 210, 100 % );
 }
 window {                             //90 for kids
-    background-color: rgba ( 33, 33, 33, 100 % );
-    border:           3;
+    background-color: rgba ( 0, 0, 0, 90 % );
+    border:           0;
     padding:          5;
 }
 mainbox {

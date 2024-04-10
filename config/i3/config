@@ -32,7 +32,7 @@ bindsym $mod+e exec $rofi/emoji
 #       $mod+f (USED)
 bindsym $mod+g exec $rofi/google
 #       $mod+h (USED)
-bindsym $mod+i exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && $rofi/pass 
+#       $mod+i
 #       $mod+j (USED)
 #       $mod+k (USED)
 #       $mod+l (USED)
