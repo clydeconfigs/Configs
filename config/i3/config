@@ -3,7 +3,7 @@
 # (now known as Arch)
 #
 
-exec feh --bg-scale $HOME/Media/Random/Pics/saturn.jpg
+exec feh --bg-scale $HOME/Media/Random/Pics/mina-nether.jpg
 exec greenclip daemon
 exec picom
 exec xautolock -time 6 -locker "i3lock -c 000022"
@@ -44,7 +44,7 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-bindsym $mod+u exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && export key_database_dir="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
+bindsym $mod+u exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && export KEYS_DIR="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)

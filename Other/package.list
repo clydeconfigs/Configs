@@ -7,8 +7,9 @@ caja
 colordiff
 cryptsetup
 dunst
+dunst
 feh
-fish 
+fish
 flameshot
 git
 gitui
@@ -17,13 +18,13 @@ i3-volume
 imagemagick
 kolourpaint
 ly
+maim
 man
 micro
 mpv
+ncdu
 netcat
-noto-fonts-cjk
-pass
-pass-otp
+otb-unifont
 pavucontrol
 picom
 pipewire-pulse

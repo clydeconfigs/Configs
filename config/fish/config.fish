@@ -10,7 +10,7 @@ end
 
 export PYTHONSTARTUP="$HOME/Media/Code/Configs/Other/python_startup.py"
 export PASSWORD_STORE_DIR="$HOME/Media/Sensible/pass/password-store"
-export key_database_dir="$HOME/Media/Sensible/keys_database"
+export KEYS_DIR="$HOME/Media/Sensible/keys_database"
 
 source ~/.config/fish/abbreviations.fish
 
@@ -30,3 +30,5 @@ set -gx EDITOR "micro"
 set -gx HISTTIMEFORMAT "%F %T "
 set -gx HISTSIZE
 set -gx HISTFILESIZE
+
+cd
