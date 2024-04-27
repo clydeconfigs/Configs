@@ -4,7 +4,6 @@
 #
 
 exec feh --bg-scale $HOME/Media/Random/Pics/mina-nether.jpg
-exec greenclip daemon
 exec picom
 exec xautolock -time 6 -locker "i3lock -c 000022"
 exec setxkbmap es
@@ -15,7 +14,6 @@ exec $scripts/loop
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 3
-for_window [title="^Tor Browser$"] floating enable
 
 default_floating_border pixel 0
 
@@ -44,14 +42,14 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-bindsym $mod+u exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && export KEYS_DIR="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
+bindsym $mod+u exec echo && export KEYS_DIR="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
 #       $mod+y
 #       $mod+z (USED)
 
-bindsym $mod+Shift+a exec rofi -dmenu -p "this is sensible! 'yes' to continue" -lines 0 <<< "yes" && $rofi/greenclip
+#       $mod+Shift+a
 #       $mod+Shift+b
 bindsym $mod+Shift+c exec $rofi/cmd
 bindsym $mod+Shift+d exec $rofi/cryptsetupui

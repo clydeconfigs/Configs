@@ -1,3 +1,3 @@
 function enc
-    scrypt enc --passphrase dev:stdin-once --logN 20 -r8 -p8 $argv[1] $argv[1].sc
+    scrypt enc --logN 21 -r8 -p1 $argv[1] $argv[1].scrypt
 end

@@ -2,10 +2,6 @@
 abbr -ag notepad 'micro $HOME/Media/Random/notepad.txt'
 abbr -ag diary 'sh $HOME/Media/Random/Diary/open.sh'
 
-abbr -ag synclocal 'lsblk; sh ~/Media/Code/sync/copy_configs_and_sync_local_hdd.sh'
-abbr -ag syncexternal 'lsblk; sh ~/Media/Code/sync/sync_external_hdd.sh'
-abbr -ag copyconfigs 'sh $HOME/Media/Code/sync/copy_configs.sh'
-
 # abbreviations
 abbr -ag feh 'feh -d  --scale-down'
 abbr -ag gpg 'gpg --pinentry-mode loopback'
