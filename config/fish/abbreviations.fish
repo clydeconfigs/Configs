@@ -1,61 +1,70 @@
+function last_history_item
+    echo $history[1]
+end
+abbr -a !! --position anywhere --function last_history_item
+
 # quick access
-abbr -ag notepad 'micro $HOME/Media/Random/notepad.txt'
-abbr -ag diary 'sh $HOME/Media/Random/Diary/open.sh'
+abbr notepad 'micro $HOME/Media/Random/notepad.txt'
+abbr diary 'sh $HOME/Media/Random/Diary/open.sh'
 
 # abbreviations
-abbr -ag feh 'feh -d  --scale-down'
-abbr -ag gpg 'gpg --pinentry-mode loopback'
-abbr -ag copy 'xclip -sel c'
-abbr -ag upper 'tr [:lower:] [:upper:]'
-abbr -ag lower 'tr [:upper:] [:lower:]'
-abbr -ag tb 'nc termbin.com 9999'
-abbr -ag disks 'watch -n 0.1 lsblk'
-abbr -ag nanos 'date +"%s%N"'
-abbr -ag yt 'yt-dlp --downloader aria2c'
-abbr -ag si 'stat -c %s'
-abbr -ag .. 'cd ..'
-abbr -ag ... 'cd .. && cd ..'
-abbr -ag .... 'cd .. && cd .. && cd ..'
-abbr -ag ..... 'cd .. && cd .. && cd .. && cd ..'
+abbr sc 'sudo cryptsetup'
+abbr feh 'feh -d  --scale-down'
+abbr gpg 'gpg --pinentry-mode loopback'
+abbr copy 'xclip -sel c'
+abbr upper 'tr [:lower:] [:upper:]'
+abbr lower 'tr [:upper:] [:lower:]'
+abbr tb 'nc termbin.com 9999'
+abbr disks 'watch -n 0.1 lsblk'
+abbr nanos 'date +"%s%N"'
+abbr yt 'yt-dlp --downloader aria2c'
+abbr si 'stat -c %s'
+abbr .. 'cd ..'
+abbr ... 'cd .. && cd ..'
+abbr .... 'cd .. && cd .. && cd ..'
+abbr ..... 'cd .. && cd .. && cd .. && cd ..'
 
 # short
-abbr -ag lb 'lsblk'
-abbr -ag gu 'gitui'
-abbr -ag m 'micro'
-abbr -ag ra 'ranger'
-abbr -ag p 'python3'
-abbr -ag ju 'julia'
+abbr lb 'lsblk'
+abbr gu 'gitui'
+abbr m 'micro'
+abbr ra 'ranger'
+abbr p 'python3'
+abbr ju 'julia'
 
-# coreutils options
-abbr -ag base64 'base64 -w0' 
-abbr -ag du 'du -h'
-abbr -ag grep 'grep'
-abbr -ag cp 'cp -iv'
-abbr -ag cat 'bat -pp'
-abbr -ag ls 'ls --group-directories-first -ltr'
+# long?
+abbr listblock 'lsblk'
+abbr list 'ls'
+
+# options
+abbr base64 'base64 -w0' 
+abbr du 'du -h'
+abbr grep 'grep'
+abbr cp 'cp -iv'
+abbr cat 'bat -pp'
+abbr ls 'ls --group-directories-first -ltr'
 
 # apt
-abbr -ag i 'yay -S --noconfirm'
-abbr -ag r 'yay -R'
-abbr -ag u 'yay -Syu'
-abbr -ag s 'yay'
+abbr i 'yay -S --noconfirm'
+abbr r 'yay -R'
+abbr u 'yay -Syu'
+abbr s 'yay'
 
 # i3 
-abbr -ag abbreviations.fish 'micro ~/.config/fish/abbreviations.fish'
-abbr -ag functions.fish 'micro ~/.config/fish/functions.fish'
-abbr -ag config 'micro ~/.config/i3/config'
-abbr -ag config2 'micro ~/.config/i3status/config'
+abbr abbreviations 'micro ~/.config/fish/abbreviations.fish'
+abbr config 'micro ~/.config/i3/config'
+abbr config2 'micro ~/.config/i3status/config'
 
 # ollama
-abbr -ag ai 'ollama run llama2:13b --nowordwrap'
-abbr -ag ai2 'ollama run tinyllama:1.1b --nowordwrap'
-abbr -ag aimini 'ollama run qwen:0.5b --nowordwrap'
+abbr ai 'ollama run llama2:13b --nowordwrap'
+abbr ai2 'ollama run tinyllama:1.1b --nowordwrap'
+abbr aimini 'ollama run qwen:0.5b --nowordwrap'
 
 # navigation
-abbr -ag cdm 'cd ~/Media'
-abbr -ag cdc 'cd ~/Media/Code/Configs'
-abbr -ag cdP 'cd ~/Media/Code/Projects'
-abbr -ag cds 'cd ~/Media/Code/scripts'
-abbr -ag cdr 'cd ~/Media/Code/rofi'
-abbr -ag cdp 'cd ~/Media/Random/Pics'
-abbr -ag cdR 'cd ~/Media/Random'
+abbr cdM 'cd ~/Media'
+abbr cdC 'cd ~/Media/Code/Configs'
+abbr cdP 'cd ~/Media/Code/Projects'
+abbr cds 'cd ~/Media/Code/scripts'
+abbr cdr 'cd ~/Media/Code/rofi'
+abbr cdp 'cd ~/Media/Random/Pics'
+abbr cdR 'cd ~/Media/Random'

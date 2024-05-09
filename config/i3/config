@@ -3,7 +3,6 @@
 # (now known as Arch)
 #
 
-exec feh --bg-scale $HOME/Media/Random/Pics/sw.jpg
 exec picom
 exec xautolock -time 6 -locker "i3lock -c 000022"
 exec setxkbmap es
@@ -69,10 +68,10 @@ bindsym $mod+Shift+i exec $rofi/internet
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $rofi/time
 #       $mod+Shift+t
-bindsym $mod+Shift+u echo && export KEYS_DIR="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
+bindsym $mod+Shift+u exec echo && export KEYS_DIR="$HOME/Media/Sensible/keys_database" && keys_menu "rofi -dmenu"
 #       $mod+Shift+v (USED)
 bindsym $mod+Shift+w exec torbrowser-launcher
-bindsym $mod+Shift+x exec $rofi/filemanager
+bindsym $mod+Shift+x exec st -e ranger
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
 bindsym $mod+Shift+Escape exec $rofi/ip
