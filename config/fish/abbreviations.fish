@@ -25,6 +25,7 @@ abbr .... 'cd .. && cd .. && cd ..'
 abbr ..... 'cd .. && cd .. && cd .. && cd ..'
 
 # short
+abbr l 'lsblk;echo;df -h -x tmpfs -x efivarfs | sed '2d''
 abbr lb 'lsblk'
 abbr gu 'gitui'
 abbr m 'micro'
@@ -42,7 +43,7 @@ abbr du 'du -h'
 abbr grep 'grep'
 abbr cp 'cp -iv'
 abbr cat 'bat -pp'
-abbr ls 'ls --group-directories-first -ltr'
+abbr ls 'ls --group-directories-first -ltrGh'
 
 # apt
 abbr i 'yay -S --noconfirm'
