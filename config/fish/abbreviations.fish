@@ -8,6 +8,7 @@ abbr notepad 'micro $HOME/Media/Random/notepad.txt'
 abbr diary 'sh $HOME/Media/Random/Diary/open.sh'
 
 # abbreviations
+abbr s 'sudo'
 abbr sc 'sudo cryptsetup'
 abbr feh 'feh -d  --scale-down'
 abbr gpg 'gpg --pinentry-mode loopback'
@@ -49,7 +50,6 @@ abbr ls 'ls --group-directories-first -ltrGh'
 abbr i 'yay -S --noconfirm'
 abbr r 'yay -R'
 abbr u 'yay -Syu'
-abbr s 'yay'
 
 # i3 
 abbr abbreviations 'micro ~/.config/fish/abbreviations.fish'
