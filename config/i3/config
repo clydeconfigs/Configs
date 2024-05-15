@@ -27,7 +27,7 @@ bindsym $mod+e exec $rofi/emoji
 #       $mod+f (USED)
 bindsym $mod+g exec $rofi/google
 #       $mod+h (USED)
-#       $mod+i
+bindsym $mod+i exec $rofi/internet
 #       $mod+j (USED)
 #       $mod+k (USED)
 #       $mod+l (USED)
@@ -43,7 +43,7 @@ bindsym $mod+u exec k_menu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
-#       $mod+y
+bindsym $mod+y exec $scripts/dl
 #       $mod+z (USED)
 
 #       $mod+Shift+a
@@ -54,7 +54,7 @@ bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
 bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+h (USED)
-bindsym $mod+Shift+i exec $rofi/internet
+#       $mod+Shift+i 
 #       $mod+Shift+j (USED)
 #       $mod+Shift+k (USED) 
 #       $mod+Shift+l (USED)
@@ -74,6 +74,8 @@ bindsym $mod+Shift+x exec st -e ranger
 #       $mod+Shift+z (USED)
 bindsym $mod+Shift+Escape exec $rofi/ip
 bindsym $mod+Shift+space exec $rofi/interface
+
+bindsym $mod+Ctrl+a exec notify-send jee
 
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth

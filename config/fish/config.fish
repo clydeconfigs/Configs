@@ -33,5 +33,5 @@ if status --is-interactive
     set -gx PATH $PATH ~/Media/Code/scripts
     set -gx PATH $PATH ~/Media/Code/sync
 
-    export PYTHONSTARTUP="$HOME/Media/Code/Configs/Other/python_startup.py"
+    export PYTHONSTARTUP="$HOME/Media/Code/Configs/python_startup.py"
 end
