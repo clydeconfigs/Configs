@@ -72,7 +72,7 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Shift+x exec st -e ranger
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
-bindsym $mod+Shift+Escape exec $rofi/ip
+bindsym $mod+Shift+Tab exec $rofi/ip
 bindsym $mod+Shift+space exec $rofi/interface
 
 bindsym $mod+Ctrl+a exec notify-send jee
