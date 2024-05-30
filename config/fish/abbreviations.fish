@@ -26,7 +26,8 @@ abbr .... 'cd .. && cd .. && cd ..'
 abbr ..... 'cd .. && cd .. && cd .. && cd ..'
 
 # short
-abbr l 'lsblk;echo;df -h -x tmpfs -x efivarfs | sed '2d''
+abbr lsblk 'lsblk -fo NAME,SIZE,TYPE,FSUSE%,MOUNTPOINT'
+abbr l 'lsblk -fo NAME,SIZE,TYPE,FSUSE%,MOUNTPOINT;echo;df -h -x tmpfs -x efivarfs | sed '2d''
 abbr lb 'lsblk'
 abbr gu 'gitui'
 abbr m 'micro'

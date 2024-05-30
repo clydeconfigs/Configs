@@ -11,6 +11,7 @@ exec $scripts/loop
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 3
+for_window [class="Tor Browser"] floating enable move position center resize set 1000 1000
 
 default_floating_border pixel 0
 
