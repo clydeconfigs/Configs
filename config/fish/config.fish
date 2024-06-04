@@ -28,10 +28,10 @@ if status --is-interactive
     set -gx HISTSIZE
     set -gx HISTFILESIZE
 
-    set -gx PATH $PATH ~/Media/Code/Tree
-    set -gx PATH $PATH ~/Media/Code/rofi
-    set -gx PATH $PATH ~/Media/Code/scripts
-    set -gx PATH $PATH ~/Media/Code/sync
+    set -gx PATH $PATH (find /home/clyde/Media/Code/scripts -maxdepth 2 -type f -exec dirname {} \; | grep -v git | sort -u)
+    set -gx PATH $PATH "~/Media/Code/rofi"
+    set -gx PATH $PATH "~/Media/Code/sync"
+    set -gx PATH $PATH "~/Media/Code/Tree"
 
     export PYTHONSTARTUP="$HOME/Media/Code/Configs/python_startup.py"
 end

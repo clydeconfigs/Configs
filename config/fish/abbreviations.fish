@@ -9,6 +9,7 @@ abbr diary 'sh $HOME/Media/Random/Diary/open.sh'
 
 # abbreviations
 abbr s 'sudo'
+abbr hexdump 'hexdump --canonical'
 abbr sc 'sudo cryptsetup'
 abbr feh 'feh -d  --scale-down'
 abbr gpg 'gpg --pinentry-mode loopback'

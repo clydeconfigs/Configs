@@ -15,7 +15,7 @@ for_window [class="Tor Browser"] floating enable move position center resize set
 
 default_floating_border pixel 0
 
-font pango:Source Code Pro 12
+font pango:Terminus 12
 
 set $rofi $HOME/Media/Code/rofi
 set $scripts $HOME/Media/Code/scripts

@@ -1,17 +1,17 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "Source Code Pro 13";
+ font: "Terminus 13";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
- }
+}
 
 listview {
 	columns: 2;
 }
 
 window {
-	width: 40%;
+	width: 25%;
 }
 
 * {
@@ -34,7 +34,7 @@ window {
     alternate-normal-foreground: @foreground;
     normal-background:           transparent;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 100, 100, 100, 100 % );
+    selected-normal-background:  rgba ( 50, 50, 100, 100 % );
     border-color:                rgba ( 40, 85, 119, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 0, 0, 0, 0 % );
