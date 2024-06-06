@@ -5,7 +5,7 @@ command=xdotool getwindowfocus getwindowname
 interval=1
 color=#FFFFFF
 align=center
-min_width=1150
+min_width=1222
 
 [cpu]
 command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{printf "%6.2f\n", 100 - $1}'
