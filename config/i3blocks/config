@@ -1,7 +1,11 @@
 #!/bin/bash
+[bat]
+command=test -e /usr/bin/acpi && acpi | awk '{print $4}' | sed 's/,//g'
+interval=1
+color=#FFFFFF
 
 [current_window]
-command=xdotool getwindowfocus getwindowname
+command=test -e /usr/bin/acpi || xdotool getwindowfocus getwindowname
 interval=1
 color=#FFFFFF
 align=center
