@@ -18,20 +18,19 @@ if status --is-interactive
     source ~/.config/fish/abbreviations.fish
 
     set fish_prompt_pwd_dir_length 0
+    set fish_greeting (echo)
 
-    set -g fish_greeting (echo)
+    set BROWSER "firefox"
+    set EDITOR "micro"
 
-    set -gx BROWSER "firefox"
-    set -gx EDITOR "micro"
+    set HISTTIMEFORMAT "%F %T "
+    set HISTSIZE
+    set HISTFILESIZE
 
-    set -gx HISTTIMEFORMAT "%F %T "
-    set -gx HISTSIZE
-    set -gx HISTFILESIZE
-
-    set -gx PATH $PATH (find $HOME/Media/Code/scripts -maxdepth 2 -type f -exec dirname {} \; | grep -v git | sort -u)
-    set -gx PATH $PATH "$HOME/Media/Code/rofi"
-    set -gx PATH $PATH "$HOME/Media/Code/sync"
-    set -gx PATH $PATH "$HOME/Media/Code/Tree"
+    set PATH $PATH (find $HOME/Media/Code/scripts -maxdepth 2 -type f -exec dirname {} \; | grep -v git | sort -u)
+    set PATH $PATH "$HOME/Media/Code/rofi"
+    set PATH $PATH "$HOME/Media/Code/sync"
+    set PATH $PATH "$HOME/Media/Code/Tree"
 
     export PYTHONSTARTUP="$HOME/Media/Code/Configs/python_startup.py"
 end

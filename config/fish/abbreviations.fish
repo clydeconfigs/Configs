@@ -8,7 +8,7 @@ abbr notepad 'micro $HOME/Media/Random/notepad.txt'
 abbr diary 'sh $HOME/Media/Random/Diary/open.sh'
 
 # abbreviations
-abbr s 'sudo'
+abbr e 'exit'
 abbr hexdump 'hexdump --canonical'
 abbr sc 'sudo cryptsetup'
 abbr feh 'feh -d  --scale-down'
