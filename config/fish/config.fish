@@ -1,5 +1,10 @@
 # ~/.config/fish/config.fish
 
+export music="$HOME/Media/Random/Music"
+export vids="$HOME/Media/Random/Vids"
+export pics="$HOME/Media/Random/Pics"
+export kpop="$HOME/Media/Random/Pics/kpop"
+
 if status --is-interactive
     function fish_prompt
         set -l last_status $status
@@ -34,3 +39,4 @@ if status --is-interactive
 
     export PYTHONSTARTUP="$HOME/Media/Code/Configs/python_startup.py"
 end
+

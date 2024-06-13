@@ -3,6 +3,10 @@ function last_history_item
 end
 abbr -a !! --position anywhere --function last_history_item
 
+# crazy temp things
+abbr t 'mkdir /tmp/t/ 2> /dev/null; set f (mktemp -d "/tmp/t/$argv[1]XXXXXXX"); cd $f'
+abbr ct 'cd /tmp/t/(ls /tmp/t | grep $argv[1])'
+
 # quick access
 abbr notepad 'micro $HOME/Media/Random/notepad.txt'
 abbr diary 'sh $HOME/Media/Random/Diary/open.sh'
@@ -28,8 +32,6 @@ abbr ..... 'cd .. && cd .. && cd .. && cd ..'
 
 # short
 abbr lsblk 'lsblk -o NAME,SIZE,FSTYPE,FSUSE%,MOUNTPOINT'
-abbr l 'lsblk -o NAME,SIZE,FSTYPE,FSUSE%,MOUNTPOINT;echo;df -h -x tmpfs -x efivarfs | sed '2d''
-abbr lb 'lsblk'
 abbr gu 'gitui'
 abbr m 'micro'
 abbr ra 'ranger'

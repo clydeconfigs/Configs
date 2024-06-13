@@ -62,7 +62,7 @@ bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+l (USED)
 #       $mod+Shift+m (USED)
 #       $mod+Shift+n (USED)
-#       $mod+Shift+o
+bindsym $mod+Shift+o exec $scripts/graphic/copyocr
 #       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
@@ -84,7 +84,7 @@ bindsym $mod+Tab workspace back_and_forth
 
 bindsym $mod+s exec $scripts/sa
 
-bindsym $mod+z exec $scripts/maim
+bindsym $mod+z exec $scripts/maimscreenshot
 
 bindsym $mod+x exec EDITOR=micro caja $HOME/Media/Random/
 
