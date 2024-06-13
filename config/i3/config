@@ -3,6 +3,7 @@
 # (now known as Arch)
 #
 
+exec feh --bg-fill /home/clyde/Media/Random/Pics/bg.jpg
 exec xautolock -time 6 -locker "i3lock -c 000022"
 exec setxkbmap es
 exec dunst

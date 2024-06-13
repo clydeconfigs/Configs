@@ -48,7 +48,7 @@ window {
 }
 window {                             //90 for kids
     background-color: rgba ( 0, 0, 0, 90 % );
-    border:           0;
+    border:           3;
     padding:          5;
 }
 mainbox {
