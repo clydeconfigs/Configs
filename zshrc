@@ -3,6 +3,8 @@ test -z "$PS1" && exit
 autoload -U compinit; compinit
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+PS1='%T %/> '
+
 export BROWSER="firefox"
 export EDITOR="micro"
 

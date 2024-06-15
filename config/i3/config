@@ -3,7 +3,7 @@
 # (now known as Arch)
 #
 
-exec feh --bg-fill /home/clyde/Media/Random/Pics/bg.jpg
+exec feh --bg-fill /home/clyde/media/random/Pics/bg.jpg
 exec xautolock -time 6 -locker "i3lock -c 000022"
 exec setxkbmap es
 exec dunst
@@ -18,8 +18,8 @@ default_floating_border pixel 0
 
 font pango:Terminus 12
 
-set $rofi $HOME/Media/Code/rofi
-set $scripts $HOME/Media/Code/scripts
+set $rofi $HOME/media/code/rofi
+set $scripts $HOME/media/code/scripts
 
 bindsym $mod+a exec $scripts/graphic/workspaces
 bindsym $mod+b exec $rofi/autobluetooth
@@ -86,7 +86,7 @@ bindsym $mod+s exec $scripts/sa
 
 bindsym $mod+z exec $scripts/maimscreenshot
 
-bindsym $mod+x exec EDITOR=micro caja $HOME/Media/Random/
+bindsym $mod+x exec EDITOR=micro caja $HOME/media/random/
 
 bindsym $mod+Shift+m --whole-window --border exec i3-volume mute
 bindsym $mod+plus exec i3-volume up 10 -P

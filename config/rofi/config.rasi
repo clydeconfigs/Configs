@@ -1,6 +1,6 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "Terminus 13";
+ font: "Monospace 14";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
@@ -11,7 +11,7 @@ listview {
 }
 
 window {
-	width: 25%;
+	width: 30%;
 }
 
 * {

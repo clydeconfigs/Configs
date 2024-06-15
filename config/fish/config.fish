@@ -1,9 +1,9 @@
 # ~/.config/fish/config.fish
 
-export music="$HOME/Media/Random/Music"
-export vids="$HOME/Media/Random/Vids"
-export pics="$HOME/Media/Random/Pics"
-export kpop="$HOME/Media/Random/Pics/kpop"
+export music="$HOME/media/random/Music"
+export vids="$HOME/media/random/Vids"
+export pics="$HOME/media/random/Pics"
+export kpop="$HOME/media/random/Pics/kpop"
 
 if status --is-interactive
     function fish_prompt
@@ -32,11 +32,11 @@ if status --is-interactive
     set HISTSIZE
     set HISTFILESIZE
 
-    set PATH $PATH (find $HOME/Media/Code/scripts -maxdepth 2 -type f -exec dirname {} \; | grep -v git | sort -u)
-    set PATH $PATH "$HOME/Media/Code/rofi"
-    set PATH $PATH "$HOME/Media/Code/sync"
-    set PATH $PATH "$HOME/Media/Code/Tree"
+    set PATH $PATH (find $HOME/media/code/scripts -maxdepth 2 -type f -exec dirname {} \; | grep -v git | sort -u)
+    set PATH $PATH "$HOME/media/code/rofi"
+    set PATH $PATH "$HOME/media/code/sync"
+    set PATH $PATH "$HOME/media/code/Tree"
 
-    export PYTHONSTARTUP="$HOME/Media/Code/Configs/python_startup.py"
+    export PYTHONSTARTUP="$HOME/media/code/Configs/python_startup.py"
 end
 

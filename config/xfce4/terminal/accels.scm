@@ -42,7 +42,7 @@
 ; (gtk_accel_path "<Actions>/terminal-window/read-only" "")
 ; (gtk_accel_path "<Actions>/terminal-window/file-menu" "")
 ; (gtk_accel_path "<Actions>/terminal-window/zoom-out-alt" "<Primary>KP_Subtract")
-(gtk_accel_path "<Actions>/terminal-window/search" "<Primary><Shift>f")
+; (gtk_accel_path "<Actions>/terminal-window/search" "<Primary><Shift>f")
 (gtk_accel_path "<Actions>/terminal-window/goto-tab-6" "<Primary>6")
 ; (gtk_accel_path "<Actions>/terminal-window/preferences" "")
 ; (gtk_accel_path "<Actions>/terminal-window/prev-tab" "<Primary>Page_Up")
