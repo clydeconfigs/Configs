@@ -1,6 +1,6 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "Monospace 14";
+ font: "DejaVu Sans Mono 11";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
