@@ -41,7 +41,7 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+r (USED)
 #       $mod+s (USED)
 #       $mod+t 
-bindsym $mod+u exec k_menu "rofi -dmenu"
+bindsym $mod+u exec kmenu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
@@ -84,7 +84,7 @@ bindsym $mod+Tab workspace back_and_forth
 
 bindsym $mod+s exec $scripts/sa
 
-bindsym $mod+z exec $scripts/maimscreenshot
+bindsym $mod+z exec $scripts/graphic/xmaimscreenshot
 
 bindsym $mod+x exec EDITOR=micro caja $HOME/media/random/
 
