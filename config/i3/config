@@ -62,11 +62,11 @@ bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+l (USED)
 #       $mod+Shift+m (USED)
 #       $mod+Shift+n (USED)
-bindsym $mod+Shift+o exec $scripts/graphic/copyocr
+bindsym $mod+Shift+o exec $scripts/graphic/xcopyocr
 #       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
-bindsym $mod+Shift+s exec $scripts/graphic/time
+bindsym $mod+Shift+s exec $scripts/time
 #       $mod+Shift+t
 bindsym $mod+Shift+u exec keys_menu "rofi -dmenu"
 #       $mod+Shift+v (USED)
@@ -74,7 +74,7 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Shift+x exec xfce4-terminal --hide-menubar --hide-scrollbar -e ranger
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
-bindsym $mod+Shift+Tab exec $scripts/graphic/ip
+bindsym $mod+Shift+Tab exec $scripts/ip
 bindsym $mod+Shift+space exec $rofi/interface
 
 bindsym $mod+Ctrl+a exec notify-send jee

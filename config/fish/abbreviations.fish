@@ -12,7 +12,6 @@ abbr notepad 'micro $HOME/media/Random/notepad.txt'
 abbr diary 'sh $HOME/media/Random/Diary/open.sh'
 
 # changes
-abbr sf 'sf -ho'
 abbr hexdump 'hexdump --canonical'
 abbr feh 'feh -d  --scale-down'
 abbr gpg 'gpg --pinentry-mode loopback'
