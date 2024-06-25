@@ -21,7 +21,7 @@ font pango:Terminus 12
 set $rofi $HOME/media/code/rofi
 set $scripts $HOME/media/code/scripts
 
-bindsym $mod+a exec $scripts/graphic/workspaces
+bindsym $mod+a exec $scripts/workspaces
 bindsym $mod+b exec $rofi/autobluetooth
 bindsym $mod+c exec $rofi/calculator
 bindsym $mod+d exec $rofi/dmenu
