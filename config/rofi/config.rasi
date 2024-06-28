@@ -1,6 +1,6 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "DejaVu Sans Mono 11";
+ font: "Sans 12";
  combi-modi: "window,drun,ssh";
  lines: 0;
  fixed-num-lines: false;
@@ -47,8 +47,8 @@ window {
     selected-active-background:  rgba ( 38, 139, 210, 100 % );
 }
 window {                             //90 for kids
-    background-color: rgba ( 0, 0, 0, 90 % );
-    border:           3;
+    background-color: rgba ( 100, 100, 100, 90 % );
+    border:           0;
     padding:          5;
 }
 mainbox {
