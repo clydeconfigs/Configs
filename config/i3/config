@@ -56,7 +56,7 @@ bindsym $mod+Shift+e exec $rofi/exiti3
 #       $mod+Shift+f
 bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+h (USED)
-#       $mod+Shift+i 
+bindsym $mod+Shift+i exec $scripts/yandex
 #       $mod+Shift+j (USED)
 #       $mod+Shift+k (USED) 
 #       $mod+Shift+l (USED)
