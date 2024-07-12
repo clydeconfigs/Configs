@@ -62,7 +62,7 @@ bindsym $mod+Shift+i exec $scripts/yandex
 #       $mod+Shift+l (USED)
 #       $mod+Shift+m (USED)
 #       $mod+Shift+n (USED)
-bindsym $mod+Shift+o exec $scripts/graphic/xcopyocr
+bindsym $mod+Shift+o exec $scripts/x11/xcopyocr
 #       $mod+Shift+p 
 #       $mod+Shift+q
 #       $mod+Shift+r (USED)
@@ -74,7 +74,7 @@ bindsym $mod+Shift+w exec torbrowser-launcher
 bindsym $mod+Shift+x exec xfce4-terminal --hide-menubar --hide-scrollbar -e ranger
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
-bindsym $mod+Shift+Tab exec $scripts/ip
+bindsym $mod+Shift+Tab exec $scripts/x11/ip
 bindsym $mod+Shift+space exec $rofi/interface
 
 bindsym $mod+Ctrl+a exec notify-send jee
@@ -82,9 +82,9 @@ bindsym $mod+Ctrl+a exec notify-send jee
 bindsym $mod+Escape workspace next
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+s exec $scripts/sa
+bindsym $mod+s exec $scripts/x11/sa
 
-bindsym $mod+z exec $scripts/graphic/xmaimscreenshot
+bindsym $mod+z exec $scripts/x11/xmaimscreenshot
 
 bindsym $mod+x exec EDITOR=micro caja $HOME/media/random/
 
