@@ -40,7 +40,7 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 #       $mod+s (USED)
-#       $mod+t 
+bindsym $mod+t exec sleep 1 && xdotool type "$(xclip -sel c -o)"
 bindsym $mod+u exec kmenu "rofi -dmenu"
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
@@ -71,7 +71,7 @@ bindsym $mod+Shift+s exec $scripts/time
 bindsym $mod+Shift+u exec keys_menu "rofi -dmenu"
 #       $mod+Shift+v (USED)
 bindsym $mod+Shift+w exec torbrowser-launcher
-bindsym $mod+Shift+x exec xfce4-terminal --hide-menubar --hide-scrollbar -e ranger
+bindsym $mod+Shift+x exec $rofi/record
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
 bindsym $mod+Shift+Tab exec $scripts/x11/ip
