@@ -71,7 +71,7 @@ bindsym $mod+Shift+s exec $scripts/time
 bindsym $mod+Shift+u exec keys_menu "rofi -dmenu"
 #       $mod+Shift+v (USED)
 bindsym $mod+Shift+w exec torbrowser-launcher
-bindsym $mod+Shift+x exec $rofi/record
+bindsym $mod+Shift+x exec $rofi/togglerecord
 #       $mod+Shift+y
 #       $mod+Shift+z (USED)
 bindsym $mod+Shift+Tab exec $scripts/x11/ip
