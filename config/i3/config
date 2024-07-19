@@ -53,7 +53,7 @@ bindsym $mod+Shift+a exec $rofi/windowcd
 bindsym $mod+Shift+c exec $rofi/cmd
 bindsym $mod+Shift+d exec $rofi/cryptsetupui
 bindsym $mod+Shift+e exec $rofi/exiti3
-#       $mod+Shift+f
+#       $mod+Shift+f 
 bindsym $mod+Shift+g exec $rofi/translate
 #       $mod+Shift+h (USED)
 bindsym $mod+Shift+i exec $scripts/yandex
@@ -64,7 +64,7 @@ bindsym $mod+Shift+i exec $scripts/yandex
 #       $mod+Shift+n (USED)
 bindsym $mod+Shift+o exec $scripts/x11/xcopyocr
 #       $mod+Shift+p 
-#       $mod+Shift+q
+bindsym $mod+Shift+q exec notify-send 🤯🫵🫵🤯🤯🤯🤯🫵🫵🤯🤯🤯
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $scripts/time
 #       $mod+Shift+t
