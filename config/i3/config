@@ -9,6 +9,8 @@ exec setxkbmap es
 exec dunst
 exec xrdb -merge ~/.Xresources
 exec $scripts/loop
+exec $scripts/cliploop
+exec picom
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 3
