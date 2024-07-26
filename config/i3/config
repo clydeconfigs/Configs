@@ -42,8 +42,8 @@ bindsym $mod+p exec $rofi/genrandom
 #       $mod+q (USED)
 #       $mod+r (USED)
 #       $mod+s (USED)
-bindsym $mod+t exec sleep 1 && xdotool type "$(xclip -sel c -o)"
-bindsym $mod+u exec kmenu "rofi -dmenu"
+bindsym $mod+t exec sleep 1.5 && xdotool type "$(xclip -sel c -o)"
+bindsym $mod+u exec kmenu
 #       $mod+v (USED)
 bindsym $mod+w exec $rofi/weblinks
 #       $mod+x (USED)
@@ -66,7 +66,7 @@ bindsym $mod+Shift+i exec $scripts/yandex
 #       $mod+Shift+n (USED)
 bindsym $mod+Shift+o exec $scripts/x11/xcopyocr
 #       $mod+Shift+p 
-bindsym $mod+Shift+q exec notify-send 🤯🫵🫵🤯🤯🤯🤯🫵🫵🤯🤯🤯
+bindsym $mod+Shift+q exec notify-send "🤯🫵🫵🤯🤯🤯🤯🫵🫵🤯🤯🤯🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶 Remember to adjust the value according to your preferences and screen resolution."
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $scripts/time
 #       $mod+Shift+t
