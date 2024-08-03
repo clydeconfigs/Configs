@@ -3,9 +3,26 @@ function last_history_item
 end
 abbr -a !! --position anywhere --function last_history_item
 
-# crazy temp things that use cd
+# changing directories
 function t; mkdir /tmp/t/ 2> /dev/null; set f (mktemp -d "/tmp/t/$argv[1]XXXXXXX"); cd $f; end
 function ct; cd /tmp/t/(ls /tmp/t | grep $argv[1]); end
+function cs; cd "$(echo $argv[1] | sed 's#\.#/#g')"; end
+function cdf
+    set path "$(fzf --preview 'cat {}')"
+    if test -f $path
+        cd "$(dirname $path)"
+    else
+        cd $path
+    end    
+end
+function cdfr
+    set path "$(fzf --preview 'cat {}')"
+    if test -f $path
+        ranger "$(dirname $path)"
+    else
+        ranger $path
+    end    
+end
 
 # quick access
 abbr notepad 'micro $HOME/media/Random/notepad.txt'

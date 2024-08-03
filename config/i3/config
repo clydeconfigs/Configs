@@ -4,7 +4,7 @@
 #
 
 exec feh --bg-fill ~/Desktop/220826-TWICE-x-Melon-Talk-that-Talk-MV-Behind-Photos-documents-7.jpeg
-exec xautolock -time 6 -locker "i3lock -c 000022"
+exec xautolock -time 6 -locker "i3lock -c 002222"
 exec setxkbmap es
 exec dunst
 exec xrdb -merge ~/.Xresources
