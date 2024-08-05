@@ -25,7 +25,7 @@ function cdfr
 end
 
 # quick access
-abbr notepad 'micro $HOME/media/Random/notepad.txt'
+abbr notepad 'micro $HOME/media/random/notepad.txt'
 abbr diary 'sh $HOME/media/Random/Diary/open.sh'
 
 # changes
