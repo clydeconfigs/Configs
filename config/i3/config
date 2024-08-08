@@ -3,7 +3,7 @@
 # (now known as Arch)
 #
 
-exec feh --bg-fill ~/Desktop/220826-TWICE-x-Melon-Talk-that-Talk-MV-Behind-Photos-documents-7.jpeg
+exec feh --bg-fill /home/clyde/desktop/xclip-eqeuejlvll.avif
 exec xautolock -time 6 -locker "i3lock -c 002222"
 exec setxkbmap es
 exec dunst
@@ -39,7 +39,7 @@ bindsym $mod+m exec $rofi/bm3
 #       $mod+n (USED)
 bindsym $mod+o exec $rofi/dictionary
 bindsym $mod+p exec $rofi/genrandom
-#       $mod+q (USED)
+bindsym $mod+q exec notify-send "🤯🫵🫵🤯🤯🤯🤯🫵🫵🤯🤯🤯🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶 Remember to adjust the value according to your preferences and screen resolution."
 #       $mod+r (USED)
 #       $mod+s (USED)
 bindsym $mod+t exec sleep 1.5 && xdotool type "$(xclip -sel c -o)"
@@ -66,7 +66,7 @@ bindsym $mod+Shift+i exec $scripts/yandex
 #       $mod+Shift+n (USED)
 bindsym $mod+Shift+o exec $scripts/x11/xcopyocr
 #       $mod+Shift+p 
-bindsym $mod+Shift+q exec notify-send "🤯🫵🫵🤯🤯🤯🤯🫵🫵🤯🤯🤯🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶🇦🇶 Remember to adjust the value according to your preferences and screen resolution."
+bindsym $mod+Shift+q kill
 #       $mod+Shift+r (USED)
 bindsym $mod+Shift+s exec $scripts/time
 #       $mod+Shift+t
@@ -101,7 +101,6 @@ bindsym $mod+n gaps inner all set 10px; gaps outer all set 20px
 bindsym $mod+space floating toggle
 
 bindsym $mod+Return exec xfce4-terminal --hide-menubar --hide-scrollbar
-bindsym $mod+q kill
 
 mode "resize" {
         bindsym h resize grow width 5 px or 10 ppt
